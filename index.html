@@ -1,0 +1,3094 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Unit 3 · Kazakhstan and English-speaking Countries Reading Practice</title>
+
+  <style>
+    :root {
+      --bg-1: #f7f7ff;
+      --bg-2: #eef6ff;
+      --card: rgba(255, 255, 255, 0.9);
+      --text: #111827;
+      --muted: #6b7280;
+      --purple: #6d28d9;
+      --purple-soft: #ede9fe;
+      --purple-border: #ddd6fe;
+      --blue: #2563eb;
+      --green: #15803d;
+      --red: #b91c1c;
+      --shadow: 0 18px 50px rgba(88, 28, 135, 0.12);
+      --radius: 28px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(196, 181, 253, 0.45), transparent 34%),
+        radial-gradient(circle at top right, rgba(191, 219, 254, 0.42), transparent 32%),
+        linear-gradient(135deg, var(--bg-1), var(--bg-2));
+      min-height: 100vh;
+    }
+
+    body.lang-kk [data-lang="ru"],
+    body.lang-ru [data-lang="kk"] {
+      display: none !important;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .site-shell,
+    .page-shell {
+      width: min(1180px, calc(100% - 28px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      padding: 22px 0 12px;
+    }
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 14px 16px;
+      border: 1px solid rgba(124, 58, 237, 0.16);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.74);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 14px 35px rgba(88, 28, 135, 0.10);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 15px;
+      background: linear-gradient(135deg, #7c3aed, #2563eb);
+      color: white;
+      display: grid;
+      place-items: center;
+      font-weight: 950;
+      box-shadow: 0 10px 25px rgba(109, 40, 217, 0.24);
+      flex: 0 0 auto;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+      min-width: 0;
+    }
+
+    .brand-text b {
+      font-size: 14px;
+      letter-spacing: -0.02em;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .brand-text span {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 3px;
+    }
+
+    .lang-switch {
+      display: flex;
+      gap: 8px;
+      padding: 5px;
+      border-radius: 999px;
+      background: rgba(237, 233, 254, 0.85);
+      border: 1px solid rgba(124, 58, 237, 0.12);
+      flex: 0 0 auto;
+    }
+
+    .lang-btn {
+      border: 0;
+      cursor: pointer;
+      border-radius: 999px;
+      padding: 9px 14px;
+      font-weight: 900;
+      color: #4c1d95;
+      background: transparent;
+    }
+
+    .lang-btn.active {
+      background: #fff;
+      color: var(--purple);
+      box-shadow: 0 8px 20px rgba(88, 28, 135, 0.12);
+    }
+
+    .hero {
+      padding: 42px 0 22px;
+    }
+
+    .hero-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 38px;
+      padding: clamp(28px, 5vw, 54px);
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(245, 243, 255, 0.9)),
+        radial-gradient(circle at right top, rgba(124, 58, 237, 0.18), transparent 35%);
+      border: 1px solid rgba(124, 58, 237, 0.16);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      right: -80px;
+      bottom: -100px;
+      border-radius: 50%;
+      background: rgba(124, 58, 237, 0.12);
+    }
+
+    .section-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--purple-soft);
+      color: var(--purple);
+      font-weight: 950;
+      font-size: 13px;
+      border: 1px solid var(--purple-border);
+    }
+
+    .hero h1 {
+      margin: 18px 0 14px;
+      max-width: 900px;
+      font-size: clamp(34px, 6vw, 66px);
+      line-height: 0.98;
+      letter-spacing: -0.065em;
+      color: #1f1646;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-desc {
+      max-width: 790px;
+      color: #4b5563;
+      font-size: clamp(16px, 2.2vw, 20px);
+      line-height: 1.7;
+      font-weight: 650;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 28px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .mini-stat {
+      padding: 16px;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid rgba(124, 58, 237, 0.12);
+    }
+
+    .mini-stat b {
+      display: block;
+      font-size: 22px;
+      color: var(--purple);
+      margin-bottom: 4px;
+    }
+
+    .mini-stat span {
+      color: var(--muted);
+      font-weight: 750;
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    .nav-section {
+      padding: 12px 0 24px;
+    }
+
+    .unit-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 12px;
+      border-radius: 26px;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(124, 58, 237, 0.12);
+      box-shadow: 0 14px 36px rgba(88, 28, 135, 0.08);
+    }
+
+    .unit-nav a {
+      flex: 1 1 190px;
+      padding: 14px 16px;
+      border-radius: 20px;
+      background: rgba(237, 233, 254, 0.58);
+      color: #312e81;
+      border: 1px solid rgba(124, 58, 237, 0.12);
+      font-weight: 950;
+      line-height: 1.35;
+    }
+
+    .unit-nav small {
+      display: block;
+      margin-top: 4px;
+      color: #6b7280;
+      font-weight: 750;
+    }
+
+    .section {
+      padding: 24px 0;
+    }
+
+    .reading-block {
+      margin: 0 0 28px;
+      padding: clamp(18px, 3vw, 28px);
+      border-radius: 34px;
+      background: rgba(255, 255, 255, 0.64);
+      border: 1px solid rgba(124, 58, 237, 0.14);
+      box-shadow: var(--shadow);
+    }
+
+    .reading-header {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 18px;
+      margin-bottom: 22px;
+    }
+
+    .reading-title-card,
+    .reading-info-card,
+    .text-card,
+    .task-card,
+    .vocab-card,
+    .strategy-card,
+    .content-card {
+      border-radius: var(--radius);
+      background: var(--card);
+      border: 1px solid rgba(124, 58, 237, 0.13);
+      box-shadow: 0 12px 32px rgba(88, 28, 135, 0.08);
+      padding: 22px;
+    }
+
+    .reading-title-card h2 {
+      margin: 16px 0 10px;
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.05;
+      letter-spacing: -0.045em;
+      color: #24164f;
+    }
+
+    .reading-translation {
+      color: var(--muted);
+      font-weight: 850;
+    }
+
+    .reading-info-card p {
+      margin: 0;
+      line-height: 1.7;
+      color: #4b5563;
+      font-weight: 650;
+    }
+
+    .reading-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .card-title {
+      margin: 0 0 16px;
+      color: var(--purple);
+      font-size: 22px;
+      letter-spacing: -0.03em;
+    }
+
+    .reading-text {
+      padding: 20px;
+      border-radius: 24px;
+      background: #fff;
+      border: 1px solid rgba(124, 58, 237, 0.14);
+      line-height: 1.75;
+      color: #1f2937;
+      font-weight: 640;
+      font-size: 16px;
+    }
+
+    .reading-text p {
+      margin: 0 0 16px;
+    }
+
+    .reading-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    .reading-top {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    .level-badge {
+      display: inline-grid;
+      place-items: center;
+      min-width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      background: var(--purple-soft);
+      color: var(--purple);
+      font-weight: 950;
+    }
+
+    .reading-heading {
+      font-weight: 950;
+      color: #1f2937;
+    }
+
+    .question {
+      padding: 18px;
+      border-radius: 24px;
+      background: rgba(249, 250, 251, 0.96);
+      border: 1px solid rgba(148, 163, 184, 0.22);
+      margin-bottom: 16px;
+    }
+
+    .question p {
+      margin: 0 0 14px;
+      font-size: 17px;
+      font-weight: 950;
+      line-height: 1.45;
+      color: #111827;
+    }
+
+    .options {
+      display: grid;
+      gap: 10px;
+    }
+
+    .option {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      padding: 13px 14px;
+      border-radius: 17px;
+      background: white;
+      border: 1px solid rgba(124, 58, 237, 0.13);
+      cursor: pointer;
+      font-weight: 760;
+      line-height: 1.45;
+      color: #374151;
+    }
+
+    .option input {
+      margin-top: 3px;
+      flex: 0 0 auto;
+    }
+
+    .option.correct {
+      border-color: rgba(22, 163, 74, 0.55) !important;
+      background: rgba(240, 253, 244, 0.95) !important;
+      color: #14532d !important;
+    }
+
+    .option.wrong {
+      border-color: rgba(239, 68, 68, 0.45) !important;
+      background: rgba(254, 242, 242, 0.95) !important;
+      color: #7f1d1d !important;
+    }
+
+    .question-explanation {
+      display: none;
+      margin-top: 12px;
+      padding: 12px 14px;
+      border-radius: 16px;
+      background: rgba(240, 253, 244, 0.9);
+      border: 1px solid rgba(22, 163, 74, 0.18);
+      color: #14532d;
+      line-height: 1.6;
+      font-size: 14px;
+      font-weight: 750;
+    }
+
+    .question-explanation.show {
+      display: block;
+    }
+
+    .check-btn {
+      width: 100%;
+      border: 0;
+      cursor: pointer;
+      padding: 15px 18px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #7c3aed, #2563eb);
+      color: white;
+      font-size: 16px;
+      font-weight: 950;
+      box-shadow: 0 14px 32px rgba(37, 99, 235, 0.22);
+    }
+
+    .result-box {
+      display: none;
+      margin-top: 14px;
+      padding: 14px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(22, 163, 74, 0.18);
+      color: #14532d;
+      font-weight: 900;
+    }
+
+    .result-box.show {
+      display: block;
+    }
+
+    .score-line {
+      padding: 12px 14px;
+      border-radius: 16px;
+      background: rgba(240, 253, 244, 0.9);
+      border: 1px solid rgba(22, 163, 74, 0.18);
+    }
+
+    .support-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .vocab-grid {
+      display: grid;
+      gap: 10px;
+    }
+
+    .vocab-row {
+      display: grid;
+      grid-template-columns: 0.8fr 1fr 1fr;
+      gap: 10px;
+      padding: 12px;
+      border-radius: 17px;
+      background: rgba(255, 255, 255, 0.86);
+      border: 1px solid rgba(124, 58, 237, 0.1);
+      line-height: 1.45;
+      color: #374151;
+      font-weight: 700;
+    }
+
+    .vocab-row b {
+      color: #312e81;
+    }
+
+    .strategy-list {
+      margin: 0;
+      padding-left: 20px;
+      color: #374151;
+      line-height: 1.75;
+      font-weight: 700;
+    }
+
+    .strategy-list li {
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 860px) {
+      .hero-grid,
+      .reading-header,
+      .reading-grid,
+      .support-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .topbar-inner {
+        border-radius: 24px;
+        align-items: flex-start;
+      }
+
+      .brand-text b {
+        white-space: normal;
+      }
+
+      .vocab-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .site-shell,
+      .page-shell {
+        width: min(100% - 18px, 1180px);
+      }
+
+      .hero-card,
+      .reading-block {
+        border-radius: 26px;
+      }
+
+      .text-card,
+      .task-card,
+      .vocab-card,
+      .strategy-card,
+      .reading-title-card,
+      .reading-info-card {
+        padding: 16px;
+      }
+
+      .reading-text {
+        padding: 16px;
+        font-size: 15px;
+      }
+
+      .question {
+        padding: 14px;
+      }
+
+      .option {
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body class="lang-kk">
+  <header class="topbar">
+    <div class="site-shell">
+      <div class="topbar-inner">
+        <div class="brand">
+          <div class="brand-mark">U3</div>
+          <div class="brand-text">
+            <b>Kazakhstan and English-speaking Countries · Reading Practice</b>
+            <span>
+              <span class="inline-lang" data-lang="kk">Магистратураға дайындық</span>
+              <span class="inline-lang" data-lang="ru">Подготовка к магистратуре</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="lang-switch">
+          <button class="lang-btn active" type="button" data-set-lang="kk">KZ</button>
+          <button class="lang-btn" type="button" data-set-lang="ru">RU</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="site-shell">
+        <div class="hero-card">
+          <div class="section-kicker">Unit 3 · Kazakhstan and English-speaking Countries</div>
+
+          <h1>
+            <span class="inline-lang" data-lang="kk">Қазақстан және ағылшын тілді мемлекеттер бойынша оқылым</span>
+            <span class="inline-lang" data-lang="ru">Reading по теме “Казахстан и англоязычные страны”</span>
+          </h1>
+
+          <p class="hero-desc">
+            <span class="inline-lang" data-lang="kk">
+              Бұл сайт Қазақстан, Ұлыбритания, АҚШ, Канада, Австралия және басқа ағылшын тілді елдер туралы.
+              Мәтіндер қысқа IELTS-style форматында, бірақ B1/B1+ деңгейіне бейімделген.
+            </span>
+            <span class="inline-lang" data-lang="ru">
+              Этот сайт посвящён Казахстану, Великобритании, США, Канаде, Австралии и другим англоязычным странам.
+              Тексты сделаны в коротком IELTS-style формате, но адаптированы под уровень B1/B1+.
+            </span>
+          </p>
+
+          <div class="hero-grid">
+            <div class="mini-stat"><b>5</b><span>subunit topics</span></div>
+            <div class="mini-stat"><b>10</b><span>reading passages</span></div>
+            <div class="mini-stat"><b>8</b><span>questions per reading</span></div>
+            <div class="mini-stat"><b>≤300</b><span>words per passage</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="nav-section">
+      <div class="site-shell">
+        <nav class="unit-nav">
+          <a href="#subunit-3-1">
+            Unit 3.1
+            <small>
+              <span class="inline-lang" data-lang="kk">География, ауа райы және климат</span>
+              <span class="inline-lang" data-lang="ru">География, погода и климат</span>
+            </small>
+          </a>
+
+          <a href="#subunit-3-2">
+            Unit 3.2
+            <small>
+              <span class="inline-lang" data-lang="kk">Тарих, астана және негізгі қалалар</span>
+              <span class="inline-lang" data-lang="ru">История, столица и основные города</span>
+            </small>
+          </a>
+
+          <a href="#subunit-3-3">
+            Unit 3.3
+            <small>
+              <span class="inline-lang" data-lang="kk">Саяси жүйе және экономика</span>
+              <span class="inline-lang" data-lang="ru">Политическая система и экономика</span>
+            </small>
+          </a>
+
+          <a href="#subunit-3-4">
+            Unit 3.4
+            <small>
+              <span class="inline-lang" data-lang="kk">Ұлттық таным және құндылықтар</span>
+              <span class="inline-lang" data-lang="ru">Национальная идентичность и ценности</span>
+            </small>
+          </a>
+
+          <a href="#subunit-3-5">
+            Unit 3.5
+            <small>
+              <span class="inline-lang" data-lang="kk">Тіл, мәдениет және өнер</span>
+              <span class="inline-lang" data-lang="ru">Язык, культура и искусство</span>
+            </small>
+          </a>
+        </nav>
+      </div>
+    </section>
+
+    <section class="section" id="subunit-3-1">
+      <div class="page-shell">
+
+        <!-- ================= UNIT 3.1 / READING 1 ================= -->
+        <div class="reading-block" id="subunit-3-1-reading-1">
+          <div class="reading-header">
+            <div class="reading-title-card">
+              <div class="section-kicker">Unit 3 · Subunit 1 · Reading 1</div>
+              <h2>The Geography and Climate of Kazakhstan</h2>
+
+              <div class="reading-translation">
+                <span class="inline-lang" data-lang="kk">Қазақстанның географиясы және климаты</span>
+                <span class="inline-lang" data-lang="ru">География и климат Казахстана</span>
+              </div>
+            </div>
+
+            <div class="reading-info-card">
+              <div class="lang-content" data-lang="kk">
+                <p>
+                  Бұл reading мәтіні Kazakhstan (Қазақстан), geographical position (географиялық жағдай),
+                  landlocked country (мұхитқа тікелей шығуы жоқ ел), steppe (дала), mountains (таулар)
+                  және continental climate (континенттік климат) туралы.
+                </p>
+              </div>
+
+              <div class="lang-content" data-lang="ru">
+                <p>
+                  Этот reading text о Kazakhstan (Казахстане), geographical position (географическом положении),
+                  landlocked country (стране без выхода к океану), steppe (степи), mountains (горах)
+                  и continental climate (континентальном климате).
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="reading-grid">
+            <article class="text-card">
+              <h3 class="card-title">
+                <span class="inline-lang" data-lang="kk">Мәтін</span>
+                <span class="inline-lang" data-lang="ru">Текст</span>
+              </h3>
+
+              <div class="reading-text">
+                <div class="reading-top">
+                  <span class="level-badge">B1+</span>
+                  <span class="reading-heading">Reading Practice · Geography and Climate</span>
+                </div>
+
+                <p><b>Topic:</b> The Geography and Climate of Kazakhstan</p>
+
+                <p>
+                  Kazakhstan is the largest country in Central Asia and one of the largest countries in the world.
+                  It is landlocked, which means that it has no direct access to the ocean. Kazakhstan borders Russia,
+                  China, Kyrgyzstan, Uzbekistan and Turkmenistan. The Caspian Sea lies to the west, but it is an
+                  inland body of water rather than an open sea.
+                </p>
+
+                <p>
+                  The country’s size strongly influences its geography. Kazakhstan has wide plains, dry steppes,
+                  deserts and mountain areas. Much of the central and western part of the country is open and dry,
+                  while the east and southeast contain higher mountains. These different landscapes affect where
+                  people live, how they travel and what kinds of economic activities are possible.
+                </p>
+
+                <p>
+                  Kazakhstan has a sharply continental climate. Summers are often hot, especially in the south and
+                  in lowland areas. Winters can be very cold, particularly in the north and on the open steppe.
+                  In some regions, strong winds and snow make winter travel difficult.
+                </p>
+
+                <p>
+                  Rainfall is limited in many parts of the country. Some mountain areas receive more precipitation,
+                  but dry regions depend on rivers, lakes and irrigation systems. Because water is not equally
+                  available everywhere, it is important for agriculture and settlement.
+                </p>
+
+                <p>
+                  Geography and climate have shaped Kazakhstan’s economy and way of life. People need strong heating
+                  systems in winter, while summer heat can affect farming and water use. At the same time, the steppe,
+                  mountains and open landscapes are an important part of the country’s natural identity.
+                </p>
+              </div>
+            </article>
+
+            <article class="task-card" data-test="kazakhstan-geography-reading-1">
+              <h3 class="card-title">Reading 1 · Questions</h3>
+
+              <div class="question" data-answer="c">
+                <p>1. What is the main idea of the passage?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="kg-r1-q1" value="a"> A. Kazakhstan has the same climate in every region</label>
+                  <label class="option"><input type="radio" name="kg-r1-q1" value="b"> B. Kazakhstan is mainly described as an island country</label>
+                  <label class="option"><input type="radio" name="kg-r1-q1" value="c"> C. Kazakhstan’s geography and climate influence life, travel and economic activity</label>
+                  <label class="option"><input type="radio" name="kg-r1-q1" value="d"> D. Kazakhstan’s mountains make agriculture impossible everywhere</label>
+                  <label class="option"><input type="radio" name="kg-r1-q1" value="e"> E. Kazakhstan’s climate is shaped only by the Caspian Sea</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>C</b> дұрыс. Main idea (негізгі ой) — Қазақстанның geography (география) және climate (климат) елдегі life, travel және economy-ға әсер етеді.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>C</b> правильно. Main idea (главная мысль): Kazakhstan’s geography and climate influence life, travel and economic activity.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="b">
+                <p>2. What does “landlocked” mean in the passage?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="kg-r1-q2" value="a"> A. Having many islands in the ocean</label>
+                  <label class="option"><input type="radio" name="kg-r1-q2" value="b"> B. Having no direct access to the ocean</label>
+                  <label class="option"><input type="radio" name="kg-r1-q2" value="c"> C. Being surrounded only by mountains</label>
+                  <label class="option"><input type="radio" name="kg-r1-q2" value="d"> D. Having no borders with other countries</label>
+                  <label class="option"><input type="radio" name="kg-r1-q2" value="e"> E. Being covered completely by desert</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>B</b> дұрыс. Vocabulary in context (контекст арқылы сөз мағынасы): landlocked — ocean-ға direct access жоқ ел.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>B</b> правильно. Landlocked means a country has no direct access to the ocean.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="e">
+                <p>3. Which countries are mentioned as Kazakhstan’s neighbours?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="kg-r1-q3" value="a"> A. Germany, France, Italy, Spain and Greece</label>
+                  <label class="option"><input type="radio" name="kg-r1-q3" value="b"> B. India, Pakistan, Iran, Iraq and Turkey</label>
+                  <label class="option"><input type="radio" name="kg-r1-q3" value="c"> C. Canada, Mexico, the United States and Cuba</label>
+                  <label class="option"><input type="radio" name="kg-r1-q3" value="d"> D. Norway, Sweden, Finland and Denmark</label>
+                  <label class="option"><input type="radio" name="kg-r1-q3" value="e"> E. Russia, China, Kyrgyzstan, Uzbekistan and Turkmenistan</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>E</b> дұрыс. Specific detail (нақты ақпарат): мәтінде Kazakhstan borders Russia, China, Kyrgyzstan, Uzbekistan and Turkmenistan деп берілген.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>E</b> правильно. The passage says Kazakhstan borders Russia, China, Kyrgyzstan, Uzbekistan and Turkmenistan.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="a">
+                <p>4. Where are higher mountains mainly found in Kazakhstan?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="kg-r1-q4" value="a"> A. In the east and southeast</label>
+                  <label class="option"><input type="radio" name="kg-r1-q4" value="b"> B. Only in the western deserts</label>
+                  <label class="option"><input type="radio" name="kg-r1-q4" value="c"> C. Only around the Caspian Sea</label>
+                  <label class="option"><input type="radio" name="kg-r1-q4" value="d"> D. In every part of the country equally</label>
+                  <label class="option"><input type="radio" name="kg-r1-q4" value="e"> E. Only in the central plains</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>A</b> дұрыс. Specific detail (нақты ақпарат): higher mountains Қазақстанның east және southeast бөліктерінде орналасқан.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>A</b> правильно. The text says the east and southeast contain higher mountains.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="d">
+                <p>5. What can be inferred about Kazakhstan’s winter climate?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="kg-r1-q5" value="a"> A. It is usually warm in all regions</label>
+                  <label class="option"><input type="radio" name="kg-r1-q5" value="b"> B. It has no effect on travel</label>
+                  <label class="option"><input type="radio" name="kg-r1-q5" value="c"> C. It is controlled only by rainfall</label>
+                  <label class="option"><input type="radio" name="kg-r1-q5" value="d"> D. It can be severe, especially in northern and open steppe areas</label>
+                  <label class="option"><input type="radio" name="kg-r1-q5" value="e"> E. It is milder than in all island countries</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>D</b> дұрыс. Inference (қорытынды): winter very cold болуы мүмкін, әсіресе north және open steppe аймақтарында.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>D</b> правильно. Winter can be severe, especially in the north and on the open steppe.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="b">
+                <p>6. Why are rivers, lakes and irrigation systems important?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="kg-r1-q6" value="a"> A. Because rainfall is equally high everywhere</label>
+                  <label class="option"><input type="radio" name="kg-r1-q6" value="b"> B. Because water is not equally available in all regions</label>
+                  <label class="option"><input type="radio" name="kg-r1-q6" value="c"> C. Because mountains do not receive any precipitation</label>
+                  <label class="option"><input type="radio" name="kg-r1-q6" value="d"> D. Because Kazakhstan has direct access to the ocean</label>
+                  <label class="option"><input type="radio" name="kg-r1-q6" value="e"> E. Because farming does not need water</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>B</b> дұрыс. Cause-effect (себеп-салдар): water everywhere equally available емес, сондықтан rivers, lakes және irrigation маңызды.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>B</b> правильно. Water is not equally available everywhere, so rivers, lakes and irrigation systems are important.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="c">
+                <p>7. What does the passage suggest about Kazakhstan’s natural identity?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="kg-r1-q7" value="a"> A. It is based only on cities and industry</label>
+                  <label class="option"><input type="radio" name="kg-r1-q7" value="b"> B. It is unrelated to landscape</label>
+                  <label class="option"><input type="radio" name="kg-r1-q7" value="c"> C. It is connected with the steppe, mountains and open landscapes</label>
+                  <label class="option"><input type="radio" name="kg-r1-q7" value="d"> D. It comes only from the Caspian Sea</label>
+                  <label class="option"><input type="radio" name="kg-r1-q7" value="e"> E. It is shaped only by winter weather</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>C</b> дұрыс. Мәтін бойынша steppe, mountains және open landscapes Қазақстанның natural identity бөлігі.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>C</b> правильно. The steppe, mountains and open landscapes are part of Kazakhstan’s natural identity.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="a">
+                <p>8. Which title best matches the passage?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="kg-r1-q8" value="a"> A. Kazakhstan’s Land, Climate and Way of Life</label>
+                  <label class="option"><input type="radio" name="kg-r1-q8" value="b"> B. Island Life in Central Asia</label>
+                  <label class="option"><input type="radio" name="kg-r1-q8" value="c"> C. The History of Kazakhstan’s Capital</label>
+                  <label class="option"><input type="radio" name="kg-r1-q8" value="d"> D. Why Kazakhstan Has No Dry Regions</label>
+                  <label class="option"><input type="radio" name="kg-r1-q8" value="e"> E. Mountain Tourism in Western Europe</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>A</b> дұрыс. Best title (ең лайық тақырып) geography, climate және way of life арасындағы байланысты қамтиды.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>A</b> правильно. This title covers geography, climate and way of life.
+                  </div>
+                </div>
+              </div>
+
+              <button class="check-btn" type="button" data-check="kazakhstan-geography-reading-1">
+                <span class="inline-lang" data-lang="kk">Жауаптарды тексеру</span>
+                <span class="inline-lang" data-lang="ru">Проверить ответы</span>
+              </button>
+
+              <div class="result-box" data-result="kazakhstan-geography-reading-1">
+                <div class="score-placeholder"></div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- ================= UNIT 3.1 / READING 2 ================= -->
+        <div class="reading-block" id="subunit-3-1-reading-2">
+          <div class="reading-header">
+            <div class="reading-title-card">
+              <div class="section-kicker">Unit 3 · Subunit 1 · Reading 2</div>
+              <h2>The Geography and Climate of the United Kingdom</h2>
+
+              <div class="reading-translation">
+                <span class="inline-lang" data-lang="kk">Ұлыбританияның географиясы және климаты</span>
+                <span class="inline-lang" data-lang="ru">География и климат Великобритании</span>
+              </div>
+            </div>
+
+            <div class="reading-info-card">
+              <div class="lang-content" data-lang="kk">
+                <p>
+                  Бұл reading мәтіні United Kingdom (Ұлыбритания), England, Scotland, Wales,
+                  Northern Ireland, island country (арал мемлекет), maritime climate (теңіздік климат),
+                  rainfall (жауын-шашын) және changeable weather (өзгермелі ауа райы) туралы.
+                </p>
+              </div>
+
+              <div class="lang-content" data-lang="ru">
+                <p>
+                  Этот reading text о United Kingdom (Великобритании), England, Scotland, Wales,
+                  Northern Ireland, island country (островном государстве), maritime climate
+                  (морском климате), rainfall (осадках) и changeable weather (переменчивой погоде).
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="reading-grid">
+            <article class="text-card">
+              <h3 class="card-title">
+                <span class="inline-lang" data-lang="kk">Мәтін</span>
+                <span class="inline-lang" data-lang="ru">Текст</span>
+              </h3>
+
+              <div class="reading-text">
+                <div class="reading-top">
+                  <span class="level-badge">B1+</span>
+                  <span class="reading-heading">Reading Practice · Geography and Climate</span>
+                </div>
+
+                <p><b>Topic:</b> The Geography and Climate of the United Kingdom</p>
+
+                <p>
+                  The United Kingdom is an island country in north-western Europe. It is made up of four parts:
+                  England, Scotland, Wales and Northern Ireland. Great Britain includes England, Scotland and Wales,
+                  while Northern Ireland is located on the island of Ireland. Because the UK is surrounded by the
+                  Atlantic Ocean, the North Sea and the Irish Sea, the sea strongly influences its climate and daily life.
+                </p>
+
+                <p>
+                  The UK’s landscape is varied, although the country is much smaller than Kazakhstan. Scotland and Wales
+                  have many hills and mountains, while large parts of England are lower and flatter. Northern Ireland has
+                  green countryside, lakes and coastal areas. Rivers are important for cities and transport because many
+                  towns developed near water.
+                </p>
+
+                <p>
+                  The UK has a temperate maritime climate. Winters are usually milder than in many continental countries,
+                  and summers are generally not extremely hot. However, the weather can change quickly. A sunny morning
+                  may be followed by rain, wind or cloud in the afternoon.
+                </p>
+
+                <p>
+                  Rainfall is common, but it is not the same everywhere. Western areas, especially parts of Scotland,
+                  Wales and north-west England, are often wetter because they face moist air from the Atlantic. Eastern
+                  and south-eastern areas are usually drier.
+                </p>
+
+                <p>
+                  The UK’s climate affects its lifestyle and culture. People often talk about the weather because it
+                  changes frequently and influences travel, outdoor activities and farming. The mild and wet climate also
+                  helps create green landscapes, which are an important part of the country’s image.
+                </p>
+              </div>
+            </article>
+
+            <article class="task-card" data-test="uk-geography-reading-2">
+              <h3 class="card-title">Reading 2 · Questions</h3>
+
+              <div class="question" data-answer="d">
+                <p>1. What is the main idea of the passage?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="ukg-r2-q1" value="a"> A. The UK has the same climate as Kazakhstan</label>
+                  <label class="option"><input type="radio" name="ukg-r2-q1" value="b"> B. The UK has no connection with the sea</label>
+                  <label class="option"><input type="radio" name="ukg-r2-q1" value="c"> C. The UK’s weather is always dry and sunny</label>
+                  <label class="option"><input type="radio" name="ukg-r2-q1" value="d"> D. The UK’s island geography and maritime climate shape its landscapes and lifestyle</label>
+                  <label class="option"><input type="radio" name="ukg-r2-q1" value="e"> E. The UK is mainly described through its political history</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>D</b> дұрыс. Main idea (негізгі ой) — UK island geography және maritime climate оның landscapes, weather және lifestyle-ына әсер етеді.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>D</b> правильно. Main idea: the UK’s island geography and maritime climate shape its landscapes, weather and lifestyle.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="b">
+                <p>2. Which parts make up the United Kingdom?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="ukg-r2-q2" value="a"> A. England, France, Scotland and Ireland</label>
+                  <label class="option"><input type="radio" name="ukg-r2-q2" value="b"> B. England, Scotland, Wales and Northern Ireland</label>
+                  <label class="option"><input type="radio" name="ukg-r2-q2" value="c"> C. Wales, Canada, England and Australia</label>
+                  <label class="option"><input type="radio" name="ukg-r2-q2" value="d"> D. Scotland, Iceland, Ireland and Norway</label>
+                  <label class="option"><input type="radio" name="ukg-r2-q2" value="e"> E. England, Scotland, Germany and Wales</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>B</b> дұрыс. Specific detail (нақты ақпарат): United Kingdom төрт бөліктен тұрады: England, Scotland, Wales and Northern Ireland.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>B</b> правильно. The UK is made up of England, Scotland, Wales and Northern Ireland.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="e">
+                <p>3. Why does the sea strongly influence the UK?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="ukg-r2-q3" value="a"> A. Because the UK is far from all seas</label>
+                  <label class="option"><input type="radio" name="ukg-r2-q3" value="b"> B. Because the UK is a desert country</label>
+                  <label class="option"><input type="radio" name="ukg-r2-q3" value="c"> C. Because Scotland and Wales have no coastlines</label>
+                  <label class="option"><input type="radio" name="ukg-r2-q3" value="d"> D. Because rivers are not important for towns</label>
+                  <label class="option"><input type="radio" name="ukg-r2-q3" value="e"> E. Because the UK is surrounded by the Atlantic Ocean, the North Sea and the Irish Sea</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>E</b> дұрыс. Cause-effect (себеп-салдар): UK теңіздермен қоршалғандықтан, sea climate және daily life-қа influence етеді.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>E</b> правильно. The sea influences the UK because it is surrounded by the Atlantic Ocean, the North Sea and the Irish Sea.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="a">
+                <p>4. How are Scotland and Wales described in the passage?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="ukg-r2-q4" value="a"> A. They have many hills and mountains</label>
+                  <label class="option"><input type="radio" name="ukg-r2-q4" value="b"> B. They are completely flat</label>
+                  <label class="option"><input type="radio" name="ukg-r2-q4" value="c"> C. They are drier than all eastern areas</label>
+                  <label class="option"><input type="radio" name="ukg-r2-q4" value="d"> D. They are not part of Great Britain</label>
+                  <label class="option"><input type="radio" name="ukg-r2-q4" value="e"> E. They have no rivers or lakes</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>A</b> дұрыс. Specific detail (нақты ақпарат): Scotland and Wales have many hills and mountains.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>A</b> правильно. The passage says Scotland and Wales have many hills and mountains.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="c">
+                <p>5. What does “temperate maritime climate” suggest in the text?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="ukg-r2-q5" value="a"> A. A climate with extremely hot summers and very cold winters</label>
+                  <label class="option"><input type="radio" name="ukg-r2-q5" value="b"> B. A climate found only in dry inland countries</label>
+                  <label class="option"><input type="radio" name="ukg-r2-q5" value="c"> C. A climate influenced by the sea, with mild winters and not extremely hot summers</label>
+                  <label class="option"><input type="radio" name="ukg-r2-q5" value="d"> D. A climate with no rainfall at all</label>
+                  <label class="option"><input type="radio" name="ukg-r2-q5" value="e"> E. A climate that never changes during the day</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>C</b> дұрыс. Vocabulary in context (контекст арқылы сөз мағынасы): temperate maritime climate — sea influence бар, winters mild, summers not extremely hot.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>C</b> правильно. It means a sea-influenced climate with mild winters and generally not extremely hot summers.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="d">
+                <p>6. What can be inferred about UK weather?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="ukg-r2-q6" value="a"> A. It never changes during one day</label>
+                  <label class="option"><input type="radio" name="ukg-r2-q6" value="b"> B. It is always colder than Kazakhstan’s winter</label>
+                  <label class="option"><input type="radio" name="ukg-r2-q6" value="c"> C. It is the same in the west and east</label>
+                  <label class="option"><input type="radio" name="ukg-r2-q6" value="d"> D. It can change quickly from sun to rain, wind or cloud</label>
+                  <label class="option"><input type="radio" name="ukg-r2-q6" value="e"> E. It has no effect on daily life</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>D</b> дұрыс. Inference (қорытынды): sunny morning кейін rain, wind немесе cloud болуы мүмкін, яғни weather changeable.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>D</b> правильно. UK weather can change quickly from sun to rain, wind or cloud.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="b">
+                <p>7. Why are western parts of the UK often wetter?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="ukg-r2-q7" value="a"> A. They are farther from the Atlantic Ocean</label>
+                  <label class="option"><input type="radio" name="ukg-r2-q7" value="b"> B. They face moist air from the Atlantic</label>
+                  <label class="option"><input type="radio" name="ukg-r2-q7" value="c"> C. They have no mountains or hills</label>
+                  <label class="option"><input type="radio" name="ukg-r2-q7" value="d"> D. They are located in south-eastern England</label>
+                  <label class="option"><input type="radio" name="ukg-r2-q7" value="e"> E. They receive less rainfall than eastern areas</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>B</b> дұрыс. Cause-effect (себеп-салдар): western areas Atlantic-тан келетін moist air-ға face етеді, сондықтан wetter.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>B</b> правильно. Western areas are often wetter because they face moist air from the Atlantic.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="a">
+                <p>8. Which title best matches the passage?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="ukg-r2-q8" value="a"> A. Island Geography and Changeable Weather in the UK</label>
+                  <label class="option"><input type="radio" name="ukg-r2-q8" value="b"> B. The Political System of the United Kingdom</label>
+                  <label class="option"><input type="radio" name="ukg-r2-q8" value="c"> C. Kazakhstan and the Caspian Sea</label>
+                  <label class="option"><input type="radio" name="ukg-r2-q8" value="d"> D. Why the UK Has No Rainfall</label>
+                  <label class="option"><input type="radio" name="ukg-r2-q8" value="e"> E. Mountain Farming in Central Asia</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>A</b> дұрыс. Best title UK island geography, maritime climate және changeable weather идеясын қамтиды.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>A</b> правильно. This title covers island geography, maritime climate and changeable weather in the UK.
+                  </div>
+                </div>
+              </div>
+
+              <button class="check-btn" type="button" data-check="uk-geography-reading-2">
+                <span class="inline-lang" data-lang="kk">Жауаптарды тексеру</span>
+                <span class="inline-lang" data-lang="ru">Проверить ответы</span>
+              </button>
+
+              <div class="result-box" data-result="uk-geography-reading-2">
+                <div class="score-placeholder"></div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="support-grid">
+          <article class="vocab-card">
+            <h3 class="card-title">Vocabulary</h3>
+
+            <div class="vocab-grid">
+              <div class="vocab-row"><b>landlocked</b><span>мұхитқа тікелей шығуы жоқ</span><span>не имеющий выхода к океану</span></div>
+              <div class="vocab-row"><b>steppe</b><span>дала</span><span>степь</span></div>
+              <div class="vocab-row"><b>continental climate</b><span>континенттік климат</span><span>континентальный климат</span></div>
+              <div class="vocab-row"><b>precipitation</b><span>жауын-шашын</span><span>осадки</span></div>
+              <div class="vocab-row"><b>island country</b><span>арал мемлекет</span><span>островное государство</span></div>
+              <div class="vocab-row"><b>maritime climate</b><span>теңіздік климат</span><span>морской климат</span></div>
+              <div class="vocab-row"><b>rainfall</b><span>жаңбыр мөлшері</span><span>количество осадков</span></div>
+              <div class="vocab-row"><b>changeable weather</b><span>өзгермелі ауа райы</span><span>переменчивая погода</span></div>
+            </div>
+          </article>
+
+          <article class="strategy-card">
+            <h3 class="card-title">Reading strategy</h3>
+
+            <div class="lang-content" data-lang="kk">
+              <ul class="strategy-list">
+                <li>Main idea (негізгі ой) сұрағында geography (география), climate (климат) және lifestyle (өмір салты) арасындағы байланысты ізде.</li>
+                <li>Vocabulary in context (контекст арқылы сөз мағынасы) үшін unfamiliar word (таныс емес сөз)-ден кейінгі explanation (түсіндірме)-ге қара.</li>
+                <li>Inference (қорытынды жасау) сұрағында exact sentence (дәл сөйлем)-ді емес, logical meaning (логикалық мағына)-ны таңда.</li>
+              </ul>
+            </div>
+
+            <div class="lang-content" data-lang="ru">
+              <ul class="strategy-list">
+                <li>В main idea (главная мысль) ищи связь между geography (географией), climate (климатом) и lifestyle (образом жизни).</li>
+                <li>Для vocabulary in context (значение по контексту) смотри на explanation (объяснение) после unfamiliar word (незнакомого слова).</li>
+                <li>В inference (вывод) выбирай не exact sentence (точное предложение), а logical meaning (логический смысл).</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+        <section class="section" id="subunit-3-2">
+      <div class="page-shell">
+
+        <!-- ================= UNIT 3.2 / READING 1 ================= -->
+        <div class="reading-block" id="subunit-3-2-reading-1">
+          <div class="reading-header">
+            <div class="reading-title-card">
+              <div class="section-kicker">Unit 3 · Subunit 2 · Reading 1</div>
+              <h2>Kazakhstan: From History to a Modern Capital</h2>
+
+              <div class="reading-translation">
+                <span class="inline-lang" data-lang="kk">Қазақстан: тарихтан заманауи астанаға дейін</span>
+                <span class="inline-lang" data-lang="ru">Казахстан: от истории к современной столице</span>
+              </div>
+            </div>
+
+            <div class="reading-info-card">
+              <div class="lang-content" data-lang="kk">
+                <p>
+                  Бұл reading мәтіні Kazakhstan (Қазақстан), independence (тәуелсіздік),
+                  Almaty (Алматы), Astana (Астана), capital transfer (астананы көшіру),
+                  modern development (заманауи даму) және main cities (негізгі қалалар) туралы.
+                </p>
+              </div>
+
+              <div class="lang-content" data-lang="ru">
+                <p>
+                  Этот reading text о Kazakhstan (Казахстане), independence (независимости),
+                  Almaty (Алматы), Astana (Астане), capital transfer (переносе столицы),
+                  modern development (современном развитии) и main cities (основных городах).
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="reading-grid">
+            <article class="text-card">
+              <h3 class="card-title">
+                <span class="inline-lang" data-lang="kk">Мәтін</span>
+                <span class="inline-lang" data-lang="ru">Текст</span>
+              </h3>
+
+              <div class="reading-text">
+                <div class="reading-top">
+                  <span class="level-badge">B1+</span>
+                  <span class="reading-heading">Reading Practice · History, Capital and Main Cities</span>
+                </div>
+
+                <p><b>Topic:</b> Kazakhstan: From History to a Modern Capital</p>
+
+                <p>
+                  Kazakhstan’s modern history is closely connected with the growth of its cities. For many years,
+                  Almaty was the country’s most important city and served as the capital. It was known as Alma-Ata
+                  during the Soviet period and became Almaty after Kazakhstan gained independence in 1991. Although
+                  it is no longer the seat of government, Almaty remains a major cultural, educational and commercial
+                  centre.
+                </p>
+
+                <p>
+                  After independence, Kazakhstan needed a capital that could support the development of the whole
+                  country. In 1994, the government decided to move the capital from Almaty to Aqmola, a city in the
+                  north-central part of Kazakhstan. The transfer was completed in 1997, and in 1998 the city was
+                  renamed Astana, which means “capital”.
+                </p>
+
+                <p>
+                  Astana was chosen partly because of its central location and its potential for future growth. The
+                  move was also intended to spread development beyond the southeast of the country. Since then, Astana
+                  has become a symbol of modern Kazakhstan. New government buildings, wide avenues and cultural centres
+                  have changed the city’s appearance.
+                </p>
+
+                <p>
+                  The city has had several names in its history. It was once called Akmolinsk, later Tselinograd, then
+                  Aqmola. It became Astana in 1998, Nur-Sultan in 2019, and Astana again in 2022. These name changes
+                  reflect different periods in the country’s political and social history.
+                </p>
+
+                <p>
+                  Today, Kazakhstan’s main cities have different roles. Astana is the political capital, Almaty is a
+                  cultural and business centre, and other cities such as Shymkent, Karaganda and Aktobe are important
+                  for population, industry and regional life. Together, they show how Kazakhstan combines history,
+                  independence and modern development.
+                </p>
+              </div>
+            </article>
+
+            <article class="task-card" data-test="kazakhstan-capital-reading-1">
+              <h3 class="card-title">Reading 1 · Questions</h3>
+
+              <div class="question" data-answer="c">
+                <p>1. What is the main idea of the passage?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="kc-r1-q1" value="a"> A. Almaty is still the only important city in Kazakhstan</label>
+                  <label class="option"><input type="radio" name="kc-r1-q1" value="b"> B. Kazakhstan’s cities have no connection with its modern history</label>
+                  <label class="option"><input type="radio" name="kc-r1-q1" value="c"> C. Kazakhstan’s capital change and main cities reflect its history and development</label>
+                  <label class="option"><input type="radio" name="kc-r1-q1" value="d"> D. Astana was chosen only because of its climate</label>
+                  <label class="option"><input type="radio" name="kc-r1-q1" value="e"> E. Kazakhstan has only one city with economic importance</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>C</b> дұрыс. Main idea (негізгі ой) — capital transfer (астананы көшіру) және main cities Қазақстанның history, independence және modern development байланысын көрсетеді.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>C</b> правильно. Main idea: the capital transfer and main cities show Kazakhstan’s history, independence and modern development.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="b">
+                <p>2. What role did Almaty have for many years?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="kc-r1-q2" value="a"> A. It was only a small industrial village</label>
+                  <label class="option"><input type="radio" name="kc-r1-q2" value="b"> B. It served as the capital and an important city</label>
+                  <label class="option"><input type="radio" name="kc-r1-q2" value="c"> C. It was never connected with education or culture</label>
+                  <label class="option"><input type="radio" name="kc-r1-q2" value="d"> D. It became the capital only in 2022</label>
+                  <label class="option"><input type="radio" name="kc-r1-q2" value="e"> E. It was located in north-central Kazakhstan</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>B</b> дұрыс. Specific detail (нақты ақпарат): Almaty many years capital болды және елдің маңызды city ретінде сипатталған.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>B</b> правильно. The passage says Almaty served as the capital and was an important city.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="e">
+                <p>3. Why was the capital moved from Almaty to Aqmola?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="kc-r1-q3" value="a"> A. To make Almaty less connected with business</label>
+                  <label class="option"><input type="radio" name="kc-r1-q3" value="b"> B. To move the country closer to the ocean</label>
+                  <label class="option"><input type="radio" name="kc-r1-q3" value="c"> C. To stop development in northern Kazakhstan</label>
+                  <label class="option"><input type="radio" name="kc-r1-q3" value="d"> D. To remove cultural centres from the country</label>
+                  <label class="option"><input type="radio" name="kc-r1-q3" value="e"> E. To support wider national development and future growth</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>E</b> дұрыс. Inference (қорытынды): Astana central location және future growth potential үшін таңдалды, development southeast-тен тыс тарауы керек болды.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>E</b> правильно. The move was intended to support future growth and spread development beyond the southeast.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="a">
+                <p>4. When was the capital transfer completed?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="kc-r1-q4" value="a"> A. In 1997</label>
+                  <label class="option"><input type="radio" name="kc-r1-q4" value="b"> B. In 1991</label>
+                  <label class="option"><input type="radio" name="kc-r1-q4" value="c"> C. In 1994</label>
+                  <label class="option"><input type="radio" name="kc-r1-q4" value="d"> D. In 2019</label>
+                  <label class="option"><input type="radio" name="kc-r1-q4" value="e"> E. In 2022</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>A</b> дұрыс. Specific detail (нақты ақпарат): transfer was completed in 1997.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>A</b> правильно. The text says the transfer was completed in 1997.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="d">
+                <p>5. What does the name “Astana” mean?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="kc-r1-q5" value="a"> A. Steppe</label>
+                  <label class="option"><input type="radio" name="kc-r1-q5" value="b"> B. Independence</label>
+                  <label class="option"><input type="radio" name="kc-r1-q5" value="c"> C. North city</label>
+                  <label class="option"><input type="radio" name="kc-r1-q5" value="d"> D. Capital</label>
+                  <label class="option"><input type="radio" name="kc-r1-q5" value="e"> E. Mountain</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>D</b> дұрыс. Мәтінде Astana means “capital” деп нақты жазылған.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>D</b> правильно. The passage says Astana means “capital”.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="b">
+                <p>6. What do Astana’s name changes reflect?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="kc-r1-q6" value="a"> A. Only changes in weather and climate</label>
+                  <label class="option"><input type="radio" name="kc-r1-q6" value="b"> B. Different periods in political and social history</label>
+                  <label class="option"><input type="radio" name="kc-r1-q6" value="c"> C. The disappearance of regional cities</label>
+                  <label class="option"><input type="radio" name="kc-r1-q6" value="d"> D. The end of modern development</label>
+                  <label class="option"><input type="radio" name="kc-r1-q6" value="e"> E. A complete break from Kazakhstan’s history</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>B</b> дұрыс. Мәтін бойынша name changes елдің political and social history кезеңдерін көрсетеді.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>B</b> правильно. The name changes reflect different periods in political and social history.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="c">
+                <p>7. What role does Almaty still have today?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="kc-r1-q7" value="a"> A. It is no longer important for culture or business</label>
+                  <label class="option"><input type="radio" name="kc-r1-q7" value="b"> B. It is the political seat of government</label>
+                  <label class="option"><input type="radio" name="kc-r1-q7" value="c"> C. It remains a cultural, educational and business centre</label>
+                  <label class="option"><input type="radio" name="kc-r1-q7" value="d"> D. It is mainly described as a new capital city</label>
+                  <label class="option"><input type="radio" name="kc-r1-q7" value="e"> E. It has no connection with modern Kazakhstan</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>C</b> дұрыс. Specific detail (нақты ақпарат): Almaty cultural, educational and commercial centre болып қала береді.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>C</b> правильно. Almaty remains a cultural, educational and commercial centre.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="a">
+                <p>8. Which title best matches the passage?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="kc-r1-q8" value="a"> A. Kazakhstan’s Capital, Cities and Modern Development</label>
+                  <label class="option"><input type="radio" name="kc-r1-q8" value="b"> B. Climate and Mountains of Kazakhstan</label>
+                  <label class="option"><input type="radio" name="kc-r1-q8" value="c"> C. The History of British Cities</label>
+                  <label class="option"><input type="radio" name="kc-r1-q8" value="d"> D. Why Kazakhstan Has No Main Cities</label>
+                  <label class="option"><input type="radio" name="kc-r1-q8" value="e"> E. Traditional Holidays in Central Asia</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>A</b> дұрыс. Best title Astana, Almaty, main cities және modern development тақырыптарын қамтиды.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>A</b> правильно. This title covers Astana, Almaty, main cities and modern development.
+                  </div>
+                </div>
+              </div>
+
+              <button class="check-btn" type="button" data-check="kazakhstan-capital-reading-1">
+                <span class="inline-lang" data-lang="kk">Жауаптарды тексеру</span>
+                <span class="inline-lang" data-lang="ru">Проверить ответы</span>
+              </button>
+
+              <div class="result-box" data-result="kazakhstan-capital-reading-1">
+                <div class="score-placeholder"></div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- ================= UNIT 3.2 / READING 2 ================= -->
+        <div class="reading-block" id="subunit-3-2-reading-2">
+          <div class="reading-header">
+            <div class="reading-title-card">
+              <div class="section-kicker">Unit 3 · Subunit 2 · Reading 2</div>
+              <h2>London and the Historical Cities of the United Kingdom</h2>
+
+              <div class="reading-translation">
+                <span class="inline-lang" data-lang="kk">Лондон және Ұлыбританияның тарихи қалалары</span>
+                <span class="inline-lang" data-lang="ru">Лондон и исторические города Великобритании</span>
+              </div>
+            </div>
+
+            <div class="reading-info-card">
+              <div class="lang-content" data-lang="kk">
+                <p>
+                  Бұл reading мәтіні London (Лондон), River Thames (Темза өзені), Westminster,
+                  City of London, Edinburgh, Cardiff, Belfast және historical cities
+                  (тарихи қалалар) туралы.
+                </p>
+              </div>
+
+              <div class="lang-content" data-lang="ru">
+                <p>
+                  Этот reading text о London (Лондоне), River Thames (реке Темзе), Westminster,
+                  City of London, Edinburgh, Cardiff, Belfast и historical cities
+                  (исторических городах).
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="reading-grid">
+            <article class="text-card">
+              <h3 class="card-title">
+                <span class="inline-lang" data-lang="kk">Мәтін</span>
+                <span class="inline-lang" data-lang="ru">Текст</span>
+              </h3>
+
+              <div class="reading-text">
+                <div class="reading-top">
+                  <span class="level-badge">B1+</span>
+                  <span class="reading-heading">Reading Practice · History, Capital and Main Cities</span>
+                </div>
+
+                <p><b>Topic:</b> London and the Historical Cities of the United Kingdom</p>
+
+                <p>
+                  The history of the United Kingdom can be seen clearly in its cities. London, the capital, is one
+                  of the world’s major financial, commercial and cultural centres. Its history goes back to Roman
+                  times, when it was known as Londinium. The city developed near the River Thames, which helped trade,
+                  transport and communication.
+                </p>
+
+                <p>
+                  London became important not only because of trade, but also because of political power. Westminster
+                  became the centre of government and royal authority, while the City of London remained connected
+                  with business and finance. This combination helped London grow into a national and international
+                  centre.
+                </p>
+
+                <p>
+                  The United Kingdom is made up of England, Scotland, Wales and Northern Ireland, and each part has
+                  important cities. Edinburgh, the capital of Scotland, is known for its historic buildings, universities
+                  and cultural festivals. Cardiff, the capital of Wales, developed as an important port and later became
+                  a centre of Welsh politics and culture. Belfast, the capital of Northern Ireland, became known for
+                  shipbuilding and industry.
+                </p>
+
+                <p>
+                  Other British cities also have strong historical identities. Manchester and Birmingham grew rapidly
+                  during the Industrial Revolution and became important for manufacturing and trade. Liverpool became
+                  famous as a port city, connecting Britain with different parts of the world.
+                </p>
+
+                <p>
+                  These cities show that the UK’s history is not limited to one place. London is the political and
+                  cultural capital, but other cities also helped shape the country’s economy, industry, education and
+                  identity. Understanding the UK means looking at both its capital and its regional cities.
+                </p>
+              </div>
+            </article>
+
+            <article class="task-card" data-test="uk-historical-cities-reading-2">
+              <h3 class="card-title">Reading 2 · Questions</h3>
+
+              <div class="question" data-answer="d">
+                <p>1. What is the main idea of the passage?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="ukh-r2-q1" value="a"> A. London is the only city that matters in the United Kingdom</label>
+                  <label class="option"><input type="radio" name="ukh-r2-q1" value="b"> B. British cities developed only because of weather and climate</label>
+                  <label class="option"><input type="radio" name="ukh-r2-q1" value="c"> C. The United Kingdom has no important regional cities</label>
+                  <label class="option"><input type="radio" name="ukh-r2-q1" value="d"> D. London and regional cities together show the UK’s history, economy and identity</label>
+                  <label class="option"><input type="radio" name="ukh-r2-q1" value="e"> E. UK history can be understood without studying cities</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>D</b> дұрыс. Main idea (негізгі ой) — London ғана емес, regional cities те UK history, economy және identity қалыптастырған.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>D</b> правильно. Main idea: London and regional cities together show the UK’s history, economy and identity.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="b">
+                <p>2. What was London called in Roman times?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="ukh-r2-q2" value="a"> A. Westminster</label>
+                  <label class="option"><input type="radio" name="ukh-r2-q2" value="b"> B. Londinium</label>
+                  <label class="option"><input type="radio" name="ukh-r2-q2" value="c"> C. Cardiff</label>
+                  <label class="option"><input type="radio" name="ukh-r2-q2" value="d"> D. Belfast</label>
+                  <label class="option"><input type="radio" name="ukh-r2-q2" value="e"> E. Manchester</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>B</b> дұрыс. Specific detail (нақты ақпарат): Roman times кезінде London Londinium деп аталған.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>B</b> правильно. In Roman times, London was known as Londinium.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="e">
+                <p>3. Why was the River Thames important for London?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="ukh-r2-q3" value="a"> A. It stopped London from becoming a trade centre</label>
+                  <label class="option"><input type="radio" name="ukh-r2-q3" value="b"> B. It made the city less connected with transport</label>
+                  <label class="option"><input type="radio" name="ukh-r2-q3" value="c"> C. It was important only for royal ceremonies</label>
+                  <label class="option"><input type="radio" name="ukh-r2-q3" value="d"> D. It separated London from all other cities</label>
+                  <label class="option"><input type="radio" name="ukh-r2-q3" value="e"> E. It helped trade, transport and communication</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>E</b> дұрыс. Cause-effect (себеп-салдар): River Thames London-ның trade, transport және communication дамуына көмектесті.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>E</b> правильно. The River Thames helped trade, transport and communication.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="a">
+                <p>4. What was Westminster connected with?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="ukh-r2-q4" value="a"> A. Government and royal authority</label>
+                  <label class="option"><input type="radio" name="ukh-r2-q4" value="b"> B. Shipbuilding in Northern Ireland</label>
+                  <label class="option"><input type="radio" name="ukh-r2-q4" value="c"> C. Welsh port development</label>
+                  <label class="option"><input type="radio" name="ukh-r2-q4" value="d"> D. Manufacturing in Birmingham</label>
+                  <label class="option"><input type="radio" name="ukh-r2-q4" value="e"> E. Cultural festivals in Scotland</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>A</b> дұрыс. Specific detail (нақты ақпарат): Westminster government және royal authority centre болды.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>A</b> правильно. Westminster became the centre of government and royal authority.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="c">
+                <p>5. What is Edinburgh known for in the passage?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="ukh-r2-q5" value="a"> A. Shipbuilding and heavy industry only</label>
+                  <label class="option"><input type="radio" name="ukh-r2-q5" value="b"> B. Being the capital of Wales</label>
+                  <label class="option"><input type="radio" name="ukh-r2-q5" value="c"> C. Historic buildings, universities and cultural festivals</label>
+                  <label class="option"><input type="radio" name="ukh-r2-q5" value="d"> D. Roman trade on the River Thames</label>
+                  <label class="option"><input type="radio" name="ukh-r2-q5" value="e"> E. Being the main port of Northern Ireland</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>C</b> дұрыс. Edinburgh historic buildings, universities және cultural festivals арқылы белгілі.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>C</b> правильно. Edinburgh is known for historic buildings, universities and cultural festivals.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="d">
+                <p>6. What can be inferred about Manchester and Birmingham?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="ukh-r2-q6" value="a"> A. They became important only because of royal authority</label>
+                  <label class="option"><input type="radio" name="ukh-r2-q6" value="b"> B. They have no link with industry or trade</label>
+                  <label class="option"><input type="radio" name="ukh-r2-q6" value="c"> C. They were mainly political capitals</label>
+                  <label class="option"><input type="radio" name="ukh-r2-q6" value="d"> D. They developed strongly during the Industrial Revolution</label>
+                  <label class="option"><input type="radio" name="ukh-r2-q6" value="e"> E. They are described as port cities like Liverpool</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>D</b> дұрыс. Inference (қорытынды): Manchester және Birmingham Industrial Revolution кезінде manufacturing және trade үшін маңызды болды.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>D</b> правильно. They grew rapidly during the Industrial Revolution and became important for manufacturing and trade.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="b">
+                <p>7. Which city is described as a port that connected Britain with the wider world?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="ukh-r2-q7" value="a"> A. Cardiff</label>
+                  <label class="option"><input type="radio" name="ukh-r2-q7" value="b"> B. Liverpool</label>
+                  <label class="option"><input type="radio" name="ukh-r2-q7" value="c"> C. Edinburgh</label>
+                  <label class="option"><input type="radio" name="ukh-r2-q7" value="d"> D. Birmingham</label>
+                  <label class="option"><input type="radio" name="ukh-r2-q7" value="e"> E. Westminster</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>B</b> дұрыс. Liverpool port city ретінде Britain-ды world-тың different parts-ымен байланыстырған.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>B</b> правильно. Liverpool is described as a port city connecting Britain with different parts of the world.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="a">
+                <p>8. Which title best matches the passage?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="ukh-r2-q8" value="a"> A. London and the Historical Cities of the United Kingdom</label>
+                  <label class="option"><input type="radio" name="ukh-r2-q8" value="b"> B. The Climate of the British Isles</label>
+                  <label class="option"><input type="radio" name="ukh-r2-q8" value="c"> C. Kazakhstan’s Modern Capital</label>
+                  <label class="option"><input type="radio" name="ukh-r2-q8" value="d"> D. Why the UK Has No Regional Cities</label>
+                  <label class="option"><input type="radio" name="ukh-r2-q8" value="e"> E. Weather and Farming in Scotland</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>A</b> дұрыс. Best title London және UK historical cities туралы бүкіл passage мазмұнын қамтиды.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>A</b> правильно. This title covers the whole passage about London and historical cities of the UK.
+                  </div>
+                </div>
+              </div>
+
+              <button class="check-btn" type="button" data-check="uk-historical-cities-reading-2">
+                <span class="inline-lang" data-lang="kk">Жауаптарды тексеру</span>
+                <span class="inline-lang" data-lang="ru">Проверить ответы</span>
+              </button>
+
+              <div class="result-box" data-result="uk-historical-cities-reading-2">
+                <div class="score-placeholder"></div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="support-grid">
+          <article class="vocab-card">
+            <h3 class="card-title">Vocabulary</h3>
+
+            <div class="vocab-grid">
+              <div class="vocab-row"><b>capital transfer</b><span>астананы көшіру</span><span>перенос столицы</span></div>
+              <div class="vocab-row"><b>seat of government</b><span>үкімет орналасқан орталық</span><span>место расположения правительства</span></div>
+              <div class="vocab-row"><b>commercial centre</b><span>сауда-іскерлік орталық</span><span>коммерческий центр</span></div>
+              <div class="vocab-row"><b>modern development</b><span>заманауи даму</span><span>современное развитие</span></div>
+              <div class="vocab-row"><b>royal authority</b><span>корольдік билік</span><span>королевская власть</span></div>
+              <div class="vocab-row"><b>financial centre</b><span>қаржы орталығы</span><span>финансовый центр</span></div>
+              <div class="vocab-row"><b>Industrial Revolution</b><span>өнеркәсіптік революция</span><span>промышленная революция</span></div>
+              <div class="vocab-row"><b>regional city</b><span>аймақтық қала</span><span>региональный город</span></div>
+            </div>
+          </article>
+
+          <article class="strategy-card">
+            <h3 class="card-title">Reading strategy</h3>
+
+            <div class="lang-content" data-lang="kk">
+              <ul class="strategy-list">
+                <li>Main idea (негізгі ой) сұрағында capital (астана), city roles (қалалардың рөлі) және history (тарих) байланысын ізде.</li>
+                <li>Specific detail (нақты ақпарат) сұрақтарында dates (даталар), names (атаулар) және places (орындар)-ды мұқият тексер.</li>
+                <li>Inference (қорытынды жасау) сұрағында қала не үшін маңызды екенін мәтіндегі clues (ишаралар) арқылы анықта.</li>
+              </ul>
+            </div>
+
+            <div class="lang-content" data-lang="ru">
+              <ul class="strategy-list">
+                <li>В main idea (главная мысль) ищи связь между capital (столицей), city roles (ролями городов) и history (историей).</li>
+                <li>В specific detail (точная информация) внимательно проверяй dates (даты), names (названия) и places (места).</li>
+                <li>В inference (вывод) определяй, почему город важен, через clues (подсказки) в тексте.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+        <section class="section" id="subunit-3-3">
+      <div class="page-shell">
+
+        <!-- ================= UNIT 3.3 / READING 1 ================= -->
+        <div class="reading-block" id="subunit-3-3-reading-1">
+          <div class="reading-header">
+            <div class="reading-title-card">
+              <div class="section-kicker">Unit 3 · Subunit 3 · Reading 1</div>
+              <h2>How Global Trade Shapes a Country’s Economy</h2>
+
+              <div class="reading-translation">
+                <span class="inline-lang" data-lang="kk">Жаһандық сауда ел экономикасын қалай қалыптастырады</span>
+                <span class="inline-lang" data-lang="ru">Как мировая торговля формирует экономику страны</span>
+              </div>
+            </div>
+
+            <div class="reading-info-card">
+              <div class="lang-content" data-lang="kk">
+                <p>
+                  Бұл reading мәтіні global trade (жаһандық сауда), economy (экономика),
+                  specialisation (мамандану), competition (бәсеке), imported goods
+                  (импортталған тауарлар) және trade policy (сауда саясаты) туралы.
+                </p>
+              </div>
+
+              <div class="lang-content" data-lang="ru">
+                <p>
+                  Этот reading text о global trade (мировой торговле), economy (экономике),
+                  specialisation (специализации), competition (конкуренции), imported goods
+                  (импортных товарах) и trade policy (торговой политике).
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="reading-grid">
+            <article class="text-card">
+              <h3 class="card-title">
+                <span class="inline-lang" data-lang="kk">Мәтін</span>
+                <span class="inline-lang" data-lang="ru">Текст</span>
+              </h3>
+
+              <div class="reading-text">
+                <div class="reading-top">
+                  <span class="level-badge">B1</span>
+                  <span class="reading-heading">Reading Practice · Political System and Economy</span>
+                </div>
+
+                <p><b>Topic:</b> How Global Trade Shapes a Country’s Economy</p>
+
+                <p>
+                  Global trade means buying and selling goods and services between countries. It can help a
+                  country’s economy grow because businesses get access to more customers and consumers get more
+                  choice. Trade also allows countries to focus on the products they can make well.
+                </p>
+
+                <p>
+                  One important idea in trade is specialisation. Some countries have natural resources, good
+                  farmland, advanced technology or skilled workers. For example, one country may export grain or
+                  oil, while another may export machines or digital services. When countries focus on their strengths,
+                  they can become more productive.
+                </p>
+
+                <p>
+                  Trade also creates competition. Local companies may need to improve quality, lower prices or use
+                  new technology when they compete with foreign businesses. This can be good for consumers and can
+                  make companies more modern.
+                </p>
+
+                <p>
+                  However, trade can also create problems. Some local industries may suffer if cheaper imported
+                  goods become popular. Workers may need new skills when old jobs disappear. Small businesses may
+                  also find it difficult to sell products abroad because of transport costs, rules or language barriers.
+                </p>
+
+                <p>
+                  For this reason, governments need careful trade policies. Trade can support growth, but countries
+                  also need to protect workers, support local businesses and prepare people for economic change.
+                </p>
+              </div>
+            </article>
+                <section class="section" id="subunit-3-4">
+      <div class="page-shell">
+
+        <!-- ================= UNIT 3.4 / READING 1 ================= -->
+        <div class="reading-block" id="subunit-3-4-reading-1">
+          <div class="reading-header">
+            <div class="reading-title-card">
+              <div class="section-kicker">Unit 3 · Subunit 4 · Reading 1</div>
+              <h2>Traditions and Identity in a Changing World</h2>
+
+              <div class="reading-translation">
+                <span class="inline-lang" data-lang="kk">Өзгермелі әлемдегі дәстүрлер мен ұлттық таным</span>
+                <span class="inline-lang" data-lang="ru">Традиции и идентичность в меняющемся мире</span>
+              </div>
+            </div>
+
+            <div class="reading-info-card">
+              <div class="lang-content" data-lang="kk">
+                <p>
+                  Бұл reading мәтіні traditions (дәстүрлер), national identity (ұлттық таным),
+                  globalisation (жаһандану), modern lifestyle (заманауи өмір салты),
+                  young people (жастар) және cultural values (мәдени құндылықтар) туралы.
+                </p>
+              </div>
+
+              <div class="lang-content" data-lang="ru">
+                <p>
+                  Этот reading text о traditions (традициях), national identity (национальной идентичности),
+                  globalisation (глобализации), modern lifestyle (современном образе жизни),
+                  young people (молодёжи) и cultural values (культурных ценностях).
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="reading-grid">
+            <article class="text-card">
+              <h3 class="card-title">
+                <span class="inline-lang" data-lang="kk">Мәтін</span>
+                <span class="inline-lang" data-lang="ru">Текст</span>
+              </h3>
+
+              <div class="reading-text">
+                <div class="reading-top">
+                  <span class="level-badge">B1</span>
+                  <span class="reading-heading">Reading Practice · Lifestyle, Identity and Values</span>
+                </div>
+
+                <p><b>Topic:</b> Traditions and Identity in a Changing World</p>
+
+                <p>
+                  Traditions help people feel connected to their family, community and country. They can include
+                  food, clothing, ceremonies, music, festivals and ways of showing respect. For many people,
+                  traditions are not only old customs; they are part of national identity.
+                </p>
+
+                <p>
+                  However, modern life is changing the way people practise traditions. Globalisation has made it
+                  easier for people to travel, study abroad, watch foreign films and use international social media.
+                  Young people may learn about other cultures faster than before. As a result, some traditional habits
+                  may become less common in daily life.
+                </p>
+
+                <p>
+                  This does not always mean that traditions disappear. In many societies, people adapt traditions to
+                  modern life. For example, families may celebrate national holidays with traditional food, but also
+                  share photos and videos online. Traditional clothes may be worn during festivals rather than every day.
+                  Music and dance can also be performed on modern stages or promoted through the internet.
+                </p>
+
+                <p>
+                  The main challenge is balance. If traditions are kept only as entertainment, their deeper meaning may
+                  be lost. But if people understand why a custom is important, they can preserve it in a modern form.
+                  In this way, traditions can continue to support identity while still allowing society to change.
+                </p>
+              </div>
+            </article>
+
+            <article class="task-card" data-test="traditions-identity-reading-1">
+              <h3 class="card-title">Reading 1 · Questions</h3>
+
+              <div class="question" data-answer="c">
+                <p>1. What is the main idea of the passage?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="ti-r1-q1" value="a"> A. Traditions always disappear when societies become modern</label>
+                  <label class="option"><input type="radio" name="ti-r1-q1" value="b"> B. Young people should avoid learning about other cultures</label>
+                  <label class="option"><input type="radio" name="ti-r1-q1" value="c"> C. Traditions can support identity if they are understood and adapted carefully</label>
+                  <label class="option"><input type="radio" name="ti-r1-q1" value="d"> D. Globalisation has no effect on daily life or cultural habits</label>
+                  <label class="option"><input type="radio" name="ti-r1-q1" value="e"> E. Traditional clothes should be worn every day in all societies</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>C</b> дұрыс. Main idea (негізгі ой) — traditions identity-ді қолдай алады, бірақ оларды modern life-қа carefully adapt ету және meaning түсіну маңызды.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>C</b> правильно. Main idea: traditions can support identity when people understand their meaning and adapt them carefully.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="b">
+                <p>2. What can traditions include according to the passage?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="ti-r1-q2" value="a"> A. Only written laws and political systems</label>
+                  <label class="option"><input type="radio" name="ti-r1-q2" value="b"> B. Food, clothing, ceremonies, music and festivals</label>
+                  <label class="option"><input type="radio" name="ti-r1-q2" value="c"> C. Only modern films and online advertisements</label>
+                  <label class="option"><input type="radio" name="ti-r1-q2" value="d"> D. Transport systems and factory equipment</label>
+                  <label class="option"><input type="radio" name="ti-r1-q2" value="e"> E. Only school exams and university courses</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>B</b> дұрыс. Specific detail (нақты ақпарат): traditions food, clothing, ceremonies, music, festivals және respect көрсету ways қамтуы мүмкін.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>B</b> правильно. The passage says traditions can include food, clothing, ceremonies, music and festivals.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="e">
+                <p>3. How has globalisation affected young people?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="ti-r1-q3" value="a"> A. It has stopped them from using social media</label>
+                  <label class="option"><input type="radio" name="ti-r1-q3" value="b"> B. It has made travel and study abroad impossible</label>
+                  <label class="option"><input type="radio" name="ti-r1-q3" value="c"> C. It has removed all traditional habits immediately</label>
+                  <label class="option"><input type="radio" name="ti-r1-q3" value="d"> D. It has made every culture exactly the same</label>
+                  <label class="option"><input type="radio" name="ti-r1-q3" value="e"> E. It has helped them learn about other cultures faster</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>E</b> дұрыс. Cause-effect (себеп-салдар): globalisation travel, study abroad, foreign films және social media арқылы басқа cultures туралы тезірек білуге мүмкіндік береді.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>E</b> правильно. Globalisation helps young people learn about other cultures faster through travel, study abroad, films and social media.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="a">
+                <p>4. What does the passage suggest about traditions in modern life?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="ti-r1-q4" value="a"> A. They may change their form without disappearing completely</label>
+                  <label class="option"><input type="radio" name="ti-r1-q4" value="b"> B. They must always remain exactly the same</label>
+                  <label class="option"><input type="radio" name="ti-r1-q4" value="c"> C. They have no connection with national holidays</label>
+                  <label class="option"><input type="radio" name="ti-r1-q4" value="d"> D. They are useful only for older people</label>
+                  <label class="option"><input type="radio" name="ti-r1-q4" value="e"> E. They should be removed from public life</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>A</b> дұрыс. Inference (қорытынды): traditions disappear болмай, modern life-қа adapt болуы мүмкін.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>A</b> правильно. The passage suggests that traditions can adapt to modern life without disappearing completely.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="d">
+                <p>5. Which example shows a tradition adapted to modern life?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="ti-r1-q5" value="a"> A. Families stop celebrating national holidays</label>
+                  <label class="option"><input type="radio" name="ti-r1-q5" value="b"> B. Traditional music is never performed again</label>
+                  <label class="option"><input type="radio" name="ti-r1-q5" value="c"> C. People forget the meaning of all customs</label>
+                  <label class="option"><input type="radio" name="ti-r1-q5" value="d"> D. Families share holiday photos and videos online</label>
+                  <label class="option"><input type="radio" name="ti-r1-q5" value="e"> E. Young people are forbidden to use the internet</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>D</b> дұрыс. Мәтінде families national holidays-ті traditional food-пен celebrate етіп, photos and videos online share етуі мүмкін деп берілген.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>D</b> правильно. The text gives the example of families sharing photos and videos online during national holidays.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="b">
+                <p>6. What danger is mentioned if traditions are kept only as entertainment?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="ti-r1-q6" value="a"> A. Their popularity will always increase</label>
+                  <label class="option"><input type="radio" name="ti-r1-q6" value="b"> B. Their deeper meaning may be lost</label>
+                  <label class="option"><input type="radio" name="ti-r1-q6" value="c"> C. They will become easier to understand</label>
+                  <label class="option"><input type="radio" name="ti-r1-q6" value="d"> D. They will stop society from changing</label>
+                  <label class="option"><input type="radio" name="ti-r1-q6" value="e"> E. They will become political institutions</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>B</b> дұрыс. Мәтінде traditions only as entertainment сақталса, deeper meaning lost болуы мүмкін деп айтылған.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>B</b> правильно. If traditions are kept only as entertainment, their deeper meaning may be lost.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="c">
+                <p>7. What is the “main challenge” mentioned in the passage?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="ti-r1-q7" value="a"> A. Refusing all forms of cultural change</label>
+                  <label class="option"><input type="radio" name="ti-r1-q7" value="b"> B. Choosing foreign culture instead of local culture</label>
+                  <label class="option"><input type="radio" name="ti-r1-q7" value="c"> C. Finding balance between tradition and modern change</label>
+                  <label class="option"><input type="radio" name="ti-r1-q7" value="d"> D. Making traditional festivals disappear</label>
+                  <label class="option"><input type="radio" name="ti-r1-q7" value="e"> E. Stopping young people from learning languages</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>C</b> дұрыс. Main challenge — balance: traditions identity-ді сақтайды, бірақ society change етуіне де мүмкіндік беру керек.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>C</b> правильно. The main challenge is balance between preserving traditions and allowing society to change.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="a">
+                <p>8. Which title best matches the passage?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="ti-r1-q8" value="a"> A. Traditions and Identity in a Changing World</label>
+                  <label class="option"><input type="radio" name="ti-r1-q8" value="b"> B. Why Traditions Should Disappear</label>
+                  <label class="option"><input type="radio" name="ti-r1-q8" value="c"> C. The Political System of Modern Countries</label>
+                  <label class="option"><input type="radio" name="ti-r1-q8" value="d"> D. Technology and Climate Change</label>
+                  <label class="option"><input type="radio" name="ti-r1-q8" value="e"> E. Trade Agreements and Economic Growth</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>A</b> дұрыс. Best title traditions, identity және changing world тақырыптарын толық қамтиды.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>A</b> правильно. This title covers the key ideas: traditions, identity and a changing world.
+                  </div>
+                </div>
+              </div>
+
+              <button class="check-btn" type="button" data-check="traditions-identity-reading-1">
+                <span class="inline-lang" data-lang="kk">Жауаптарды тексеру</span>
+                <span class="inline-lang" data-lang="ru">Проверить ответы</span>
+              </button>
+
+              <div class="result-box" data-result="traditions-identity-reading-1">
+                <div class="score-placeholder"></div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- ================= UNIT 3.4 / READING 2 ================= -->
+        <div class="reading-block" id="subunit-3-4-reading-2">
+          <div class="reading-header">
+            <div class="reading-title-card">
+              <div class="section-kicker">Unit 3 · Subunit 4 · Reading 2</div>
+              <h2>Storytelling and Cultural Values</h2>
+
+              <div class="reading-translation">
+                <span class="inline-lang" data-lang="kk">Әңгімелеу және мәдени құндылықтар</span>
+                <span class="inline-lang" data-lang="ru">Сторителлинг и культурные ценности</span>
+              </div>
+            </div>
+
+            <div class="reading-info-card">
+              <div class="lang-content" data-lang="kk">
+                <p>
+                  Бұл reading мәтіні storytelling (әңгімелеу), cultural values (мәдени құндылықтар),
+                  generations (ұрпақтар), elders (үлкендер), moral education (адамгершілік тәрбие)
+                  және modern media (заманауи медиа) туралы.
+                </p>
+              </div>
+
+              <div class="lang-content" data-lang="ru">
+                <p>
+                  Этот reading text о storytelling (сторителлинге), cultural values (культурных ценностях),
+                  generations (поколениях), elders (старших), moral education (нравственном воспитании)
+                  и modern media (современных медиа).
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="reading-grid">
+            <article class="text-card">
+              <h3 class="card-title">
+                <span class="inline-lang" data-lang="kk">Мәтін</span>
+                <span class="inline-lang" data-lang="ru">Текст</span>
+              </h3>
+
+              <div class="reading-text">
+                <div class="reading-top">
+                  <span class="level-badge">B1</span>
+                  <span class="reading-heading">Reading Practice · Lifestyle, Identity and Values</span>
+                </div>
+
+                <p><b>Topic:</b> Storytelling and Cultural Values</p>
+
+                <p>
+                  Storytelling is one of the oldest ways of passing cultural values from one generation to another.
+                  Before books, television and the internet became common, many families and communities shared
+                  knowledge through stories. These stories often taught children how to behave, how to respect older
+                  people and how to understand their place in society.
+                </p>
+
+                <p>
+                  Traditional stories are important because they do more than entertain. They can explain history,
+                  show examples of courage or kindness, and teach the difference between right and wrong. In many
+                  cultures, stories about heroes, wise elders or difficult journeys help people remember what their
+                  community values most.
+                </p>
+
+                <p>
+                  Today, storytelling has changed, but it has not disappeared. Stories are now shared through films,
+                  books, podcasts, cartoons and social media. This gives cultural traditions a new audience. Young
+                  people may not always listen to stories in the same way as their grandparents did, but they can
+                  still learn values through modern forms of storytelling.
+                </p>
+
+                <p>
+                  At the same time, some meanings can be lost when stories are shortened or used only for entertainment.
+                  For this reason, families, schools and cultural organisations have an important role. They can help
+                  young people understand the message behind traditional stories. Storytelling remains valuable because
+                  it connects language, memory, identity and moral education.
+                </p>
+              </div>
+            </article>
+
+            <article class="task-card" data-test="storytelling-values-reading-2">
+              <h3 class="card-title">Reading 2 · Questions</h3>
+
+              <div class="question" data-answer="d">
+                <p>1. What is the main idea of the passage?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="sv-r2-q1" value="a"> A. Storytelling is no longer useful in modern society</label>
+                  <label class="option"><input type="radio" name="sv-r2-q1" value="b"> B. Traditional stories are only for entertainment</label>
+                  <label class="option"><input type="radio" name="sv-r2-q1" value="c"> C. Young people cannot learn values from modern media</label>
+                  <label class="option"><input type="radio" name="sv-r2-q1" value="d"> D. Storytelling helps pass cultural values and identity across generations</label>
+                  <label class="option"><input type="radio" name="sv-r2-q1" value="e"> E. Cultural organisations should replace families completely</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>D</b> дұрыс. Main idea (негізгі ой) — storytelling generations арасында cultural values, memory және identity жеткізуге көмектеседі.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>D</b> правильно. Main idea: storytelling helps pass cultural values and identity from one generation to another.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="b">
+                <p>2. What did families and communities use stories for before modern media became common?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="sv-r2-q2" value="a"> A. To stop children from learning history</label>
+                  <label class="option"><input type="radio" name="sv-r2-q2" value="b"> B. To share knowledge and teach behaviour</label>
+                  <label class="option"><input type="radio" name="sv-r2-q2" value="c"> C. To replace all forms of language</label>
+                  <label class="option"><input type="radio" name="sv-r2-q2" value="d"> D. To make every tradition disappear</label>
+                  <label class="option"><input type="radio" name="sv-r2-q2" value="e"> E. To avoid respect for older people</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>B</b> дұрыс. Specific detail (нақты ақпарат): families and communities stories арқылы knowledge shared және children behaviour үйреткен.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>B</b> правильно. Families and communities used stories to share knowledge and teach children how to behave.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="e">
+                <p>3. Why are traditional stories important?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="sv-r2-q3" value="a"> A. They remove all moral lessons from culture</label>
+                  <label class="option"><input type="radio" name="sv-r2-q3" value="b"> B. They are useful only if they are written in books</label>
+                  <label class="option"><input type="radio" name="sv-r2-q3" value="c"> C. They stop people from remembering their community</label>
+                  <label class="option"><input type="radio" name="sv-r2-q3" value="d"> D. They are never connected with courage or kindness</label>
+                  <label class="option"><input type="radio" name="sv-r2-q3" value="e"> E. They can explain history and teach values such as courage and kindness</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>E</b> дұрыс. Traditional stories history түсіндіреді, courage, kindness және right/wrong туралы values үйретеді.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>E</b> правильно. Traditional stories can explain history and teach values like courage and kindness.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="a">
+                <p>4. What does the passage suggest about storytelling today?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="sv-r2-q4" value="a"> A. It has changed form but still exists</label>
+                  <label class="option"><input type="radio" name="sv-r2-q4" value="b"> B. It has completely disappeared</label>
+                  <label class="option"><input type="radio" name="sv-r2-q4" value="c"> C. It is used only by grandparents</label>
+                  <label class="option"><input type="radio" name="sv-r2-q4" value="d"> D. It no longer reaches young people</label>
+                  <label class="option"><input type="radio" name="sv-r2-q4" value="e"> E. It is always harmful to cultural traditions</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>A</b> дұрыс. Inference (қорытынды): storytelling films, books, podcasts, cartoons және social media арқылы жаңа form алды, бірақ disappeared емес.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>A</b> правильно. Storytelling has changed form through films, books, podcasts, cartoons and social media, but it has not disappeared.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="d">
+                <p>5. Which modern forms of storytelling are mentioned?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="sv-r2-q5" value="a"> A. Only ancient ceremonies and handwritten letters</label>
+                  <label class="option"><input type="radio" name="sv-r2-q5" value="b"> B. Only political speeches and legal documents</label>
+                  <label class="option"><input type="radio" name="sv-r2-q5" value="c"> C. Only school exams and grammar tests</label>
+                  <label class="option"><input type="radio" name="sv-r2-q5" value="d"> D. Films, books, podcasts, cartoons and social media</label>
+                  <label class="option"><input type="radio" name="sv-r2-q5" value="e"> E. Factories, transport systems and trade agreements</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>D</b> дұрыс. Specific detail (нақты ақпарат): stories films, books, podcasts, cartoons және social media арқылы shared болады.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>D</b> правильно. The passage mentions films, books, podcasts, cartoons and social media.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="b">
+                <p>6. What problem can happen when stories are shortened or used only for entertainment?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="sv-r2-q6" value="a"> A. Their message becomes clearer in every case</label>
+                  <label class="option"><input type="radio" name="sv-r2-q6" value="b"> B. Some meanings can be lost</label>
+                  <label class="option"><input type="radio" name="sv-r2-q6" value="c"> C. Young people always understand them better</label>
+                  <label class="option"><input type="radio" name="sv-r2-q6" value="d"> D. Cultural values become stronger automatically</label>
+                  <label class="option"><input type="radio" name="sv-r2-q6" value="e"> E. Families no longer have any role</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>B</b> дұрыс. Мәтінде stories shortened немесе entertainment үшін ғана used болса, some meanings lost болуы мүмкін деп айтылған.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>B</b> правильно. Some meanings can be lost when stories are shortened or used only for entertainment.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="c">
+                <p>7. What role can families, schools and cultural organisations play?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="sv-r2-q7" value="a"> A. They can stop young people from learning stories</label>
+                  <label class="option"><input type="radio" name="sv-r2-q7" value="b"> B. They can remove the message from traditional stories</label>
+                  <label class="option"><input type="radio" name="sv-r2-q7" value="c"> C. They can help young people understand the message behind stories</label>
+                  <label class="option"><input type="radio" name="sv-r2-q7" value="d"> D. They can replace cultural memory with trade policy</label>
+                  <label class="option"><input type="radio" name="sv-r2-q7" value="e"> E. They can make storytelling only entertainment</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>C</b> дұрыс. Families, schools және cultural organisations young people-ға traditional stories артындағы message түсінуге көмектеседі.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>C</b> правильно. They can help young people understand the message behind traditional stories.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="a">
+                <p>8. Which title best matches the passage?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="sv-r2-q8" value="a"> A. Storytelling and Cultural Values</label>
+                  <label class="option"><input type="radio" name="sv-r2-q8" value="b"> B. Why Stories Have No Meaning</label>
+                  <label class="option"><input type="radio" name="sv-r2-q8" value="c"> C. International Trade and Business Rules</label>
+                  <label class="option"><input type="radio" name="sv-r2-q8" value="d"> D. Weather and Climate in Island Countries</label>
+                  <label class="option"><input type="radio" name="sv-r2-q8" value="e"> E. The End of Cultural Memory</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>A</b> дұрыс. Best title storytelling және cultural values арасындағы негізгі байланысты қамтиды.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>A</b> правильно. This title covers the main link between storytelling and cultural values.
+                  </div>
+                </div>
+              </div>
+
+              <button class="check-btn" type="button" data-check="storytelling-values-reading-2">
+                <span class="inline-lang" data-lang="kk">Жауаптарды тексеру</span>
+                <span class="inline-lang" data-lang="ru">Проверить ответы</span>
+              </button>
+
+              <div class="result-box" data-result="storytelling-values-reading-2">
+                <div class="score-placeholder"></div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="support-grid">
+          <article class="vocab-card">
+            <h3 class="card-title">Vocabulary</h3>
+
+            <div class="vocab-grid">
+              <div class="vocab-row"><b>tradition</b><span>дәстүр</span><span>традиция</span></div>
+              <div class="vocab-row"><b>national identity</b><span>ұлттық таным</span><span>национальная идентичность</span></div>
+              <div class="vocab-row"><b>globalisation</b><span>жаһандану</span><span>глобализация</span></div>
+              <div class="vocab-row"><b>custom</b><span>әдет-ғұрып</span><span>обычай</span></div>
+              <div class="vocab-row"><b>storytelling</b><span>әңгімелеу</span><span>сторителлинг</span></div>
+              <div class="vocab-row"><b>cultural values</b><span>мәдени құндылықтар</span><span>культурные ценности</span></div>
+              <div class="vocab-row"><b>generation</b><span>ұрпақ</span><span>поколение</span></div>
+              <div class="vocab-row"><b>moral education</b><span>адамгершілік тәрбие</span><span>нравственное воспитание</span></div>
+            </div>
+          </article>
+
+          <article class="strategy-card">
+            <h3 class="card-title">Reading strategy</h3>
+
+            <div class="lang-content" data-lang="kk">
+              <ul class="strategy-list">
+                <li>Main idea (негізгі ой) сұрағында tradition (дәстүр), identity (ұлттық таным) және modern change (заманауи өзгеріс) байланысын ізде.</li>
+                <li>Inference (қорытынды жасау) сұрағында мәтіндегі example (мысал)-дан author’s meaning (автор ойы)-н шығар.</li>
+                <li>Vocabulary in context (контекст арқылы сөз мағынасы) үшін unfamiliar word (таныс емес сөз)-дің жанындағы explanation (түсіндірме)-ге қара.</li>
+              </ul>
+            </div>
+
+            <div class="lang-content" data-lang="ru">
+              <ul class="strategy-list">
+                <li>В main idea (главная мысль) ищи связь между tradition (традицией), identity (идентичностью) и modern change (современными изменениями).</li>
+                <li>В inference (вывод) выводи author’s meaning (мысль автора) из example (примера) в тексте.</li>
+                <li>Для vocabulary in context (значение по контексту) смотри на explanation (объяснение) рядом с unfamiliar word (незнакомым словом).</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+                <section class="section" id="subunit-3-5">
+      <div class="page-shell">
+
+        <!-- ================= UNIT 3.5 / READING 1 ================= -->
+        <div class="reading-block" id="subunit-3-5-reading-1">
+          <div class="reading-header">
+            <div class="reading-title-card">
+              <div class="section-kicker">Unit 3 · Subunit 5 · Reading 1</div>
+              <h2>Language and Cultural Identity</h2>
+
+              <div class="reading-translation">
+                <span class="inline-lang" data-lang="kk">Тіл және мәдени бірегейлік</span>
+                <span class="inline-lang" data-lang="ru">Язык и культурная идентичность</span>
+              </div>
+            </div>
+
+            <div class="reading-info-card">
+              <div class="lang-content" data-lang="kk">
+                <p>
+                  Бұл reading мәтіні language (тіл), cultural identity (мәдени бірегейлік),
+                  cultural memory (мәдени жады), multilingual society (көптілді қоғам),
+                  local languages (жергілікті тілдер) және global languages (жаһандық тілдер) туралы.
+                </p>
+              </div>
+
+              <div class="lang-content" data-lang="ru">
+                <p>
+                  Этот reading text о language (языке), cultural identity (культурной идентичности),
+                  cultural memory (культурной памяти), multilingual society (многоязычном обществе),
+                  local languages (местных языках) и global languages (глобальных языках).
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="reading-grid">
+            <article class="text-card">
+              <h3 class="card-title">
+                <span class="inline-lang" data-lang="kk">Мәтін</span>
+                <span class="inline-lang" data-lang="ru">Текст</span>
+              </h3>
+
+              <div class="reading-text">
+                <div class="reading-top">
+                  <span class="level-badge">B1</span>
+                  <span class="reading-heading">Reading Practice · Language, Culture and Art</span>
+                </div>
+
+                <p><b>Topic:</b> Language and Cultural Identity</p>
+
+                <p>
+                  Language is more than a tool for communication. It also carries history, values and cultural memory.
+                  Through language, people learn traditional expressions, family stories, songs, jokes and ways of
+                  showing respect. For this reason, language is closely connected with cultural identity.
+                </p>
+
+                <p>
+                  In many countries, people speak more than one language. This can be a strength because it allows them
+                  to communicate with different communities and take part in global education, business and culture.
+                  At the same time, local and national languages need support. If a language becomes less common, some
+                  cultural knowledge may become harder to pass to the next generation.
+                </p>
+
+                <p>
+                  Schools, families and media can help preserve language. Children learn not only grammar and vocabulary,
+                  but also how language is used in real life. Traditional songs, poems, films and books can make a
+                  language feel alive and meaningful. Digital tools can also help, especially when young people use apps,
+                  videos and online platforms in their own language.
+                </p>
+
+                <p>
+                  However, language preservation should not mean rejecting other languages. In the modern world, people
+                  often need international languages for study and work. The challenge is to find balance: learning
+                  global languages while continuing to respect and use one’s own language. When this balance is kept,
+                  language can connect people to both their cultural roots and the wider world.
+                </p>
+              </div>
+            </article>
+
+            <article class="task-card" data-test="language-identity-reading-1">
+              <h3 class="card-title">Reading 1 · Questions</h3>
+
+              <div class="question" data-answer="c">
+                <p>1. What is the main idea of the passage?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="li-r1-q1" value="a"> A. Language is only useful for simple communication</label>
+                  <label class="option"><input type="radio" name="li-r1-q1" value="b"> B. Local languages should be replaced by global languages</label>
+                  <label class="option"><input type="radio" name="li-r1-q1" value="c"> C. Language supports cultural identity and should be balanced with global communication</label>
+                  <label class="option"><input type="radio" name="li-r1-q1" value="d"> D. Multilingual societies cannot protect cultural memory</label>
+                  <label class="option"><input type="radio" name="li-r1-q1" value="e"> E. Digital tools are harmful to all languages</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>C</b> дұрыс. Main idea (негізгі ой) — language cultural identity-ді сақтайды, бірақ modern world-та global languages пен own language арасында balance керек.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>C</b> правильно. Main idea: language supports cultural identity, but people need balance between global languages and their own language.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="b">
+                <p>2. What does language carry besides communication?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="li-r1-q2" value="a"> A. Only business information</label>
+                  <label class="option"><input type="radio" name="li-r1-q2" value="b"> B. History, values and cultural memory</label>
+                  <label class="option"><input type="radio" name="li-r1-q2" value="c"> C. Only grammar rules</label>
+                  <label class="option"><input type="radio" name="li-r1-q2" value="d"> D. Transport systems and industry</label>
+                  <label class="option"><input type="radio" name="li-r1-q2" value="e"> E. Weather and climate information</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>B</b> дұрыс. Specific detail (нақты ақпарат): language history, values және cultural memory тасымалдайды.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>B</b> правильно. The passage says language carries history, values and cultural memory.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="e">
+                <p>3. Why can speaking more than one language be a strength?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="li-r1-q3" value="a"> A. It stops people from joining global education</label>
+                  <label class="option"><input type="radio" name="li-r1-q3" value="b"> B. It makes local languages disappear immediately</label>
+                  <label class="option"><input type="radio" name="li-r1-q3" value="c"> C. It removes all cultural identity</label>
+                  <label class="option"><input type="radio" name="li-r1-q3" value="d"> D. It makes communication impossible</label>
+                  <label class="option"><input type="radio" name="li-r1-q3" value="e"> E. It helps people communicate with different communities and join global life</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>E</b> дұрыс. Multilingual ability әртүрлі communities-пен communication жасауға және global education, business, culture-ға қатысуға көмектеседі.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>E</b> правильно. Speaking more than one language helps people communicate with different communities and join global education, business and culture.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="a">
+                <p>4. What may happen if a language becomes less common?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="li-r1-q4" value="a"> A. Some cultural knowledge may become harder to pass on</label>
+                  <label class="option"><input type="radio" name="li-r1-q4" value="b"> B. Cultural memory becomes easier to protect automatically</label>
+                  <label class="option"><input type="radio" name="li-r1-q4" value="c"> C. Families stop needing any communication</label>
+                  <label class="option"><input type="radio" name="li-r1-q4" value="d"> D. Schools no longer teach vocabulary</label>
+                  <label class="option"><input type="radio" name="li-r1-q4" value="e"> E. Traditional songs become more common everywhere</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>A</b> дұрыс. Cause-effect (себеп-салдар): language less common болса, cultural knowledge next generation-ға жеткізу қиындайды.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>A</b> правильно. If a language becomes less common, some cultural knowledge may be harder to pass to the next generation.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="d">
+                <p>5. Which institutions can help preserve language?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="li-r1-q5" value="a"> A. Only foreign companies</label>
+                  <label class="option"><input type="radio" name="li-r1-q5" value="b"> B. Only transport systems</label>
+                  <label class="option"><input type="radio" name="li-r1-q5" value="c"> C. Only international markets</label>
+                  <label class="option"><input type="radio" name="li-r1-q5" value="d"> D. Schools, families and media</label>
+                  <label class="option"><input type="radio" name="li-r1-q5" value="e"> E. Only political parties</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>D</b> дұрыс. Мәтінде schools, families және media language preserve етуге көмектеседі деп айтылған.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>D</b> правильно. Schools, families and media can help preserve language.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="b">
+                <p>6. How can digital tools help language preservation?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="li-r1-q6" value="a"> A. By stopping young people from using their language</label>
+                  <label class="option"><input type="radio" name="li-r1-q6" value="b"> B. By allowing young people to use apps, videos and platforms in their own language</label>
+                  <label class="option"><input type="radio" name="li-r1-q6" value="c"> C. By removing all traditional poems and songs</label>
+                  <label class="option"><input type="radio" name="li-r1-q6" value="d"> D. By making every language exactly the same</label>
+                  <label class="option"><input type="radio" name="li-r1-q6" value="e"> E. By replacing families and schools completely</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>B</b> дұрыс. Digital tools young people apps, videos және online platforms-ты own language-та қолданғанда көмектеседі.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>B</b> правильно. Digital tools help when young people use apps, videos and online platforms in their own language.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="c">
+                <p>7. What is the challenge mentioned in the final paragraph?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="li-r1-q7" value="a"> A. Rejecting all international languages</label>
+                  <label class="option"><input type="radio" name="li-r1-q7" value="b"> B. Using only one global language everywhere</label>
+                  <label class="option"><input type="radio" name="li-r1-q7" value="c"> C. Learning global languages while respecting and using one’s own language</label>
+                  <label class="option"><input type="radio" name="li-r1-q7" value="d"> D. Stopping students from studying or working abroad</label>
+                  <label class="option"><input type="radio" name="li-r1-q7" value="e"> E. Avoiding all cultural roots</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>C</b> дұрыс. Final paragraph бойынша challenge — global languages үйрену, бірақ own language-ты respect және use ету.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>C</b> правильно. The challenge is to learn global languages while continuing to respect and use one’s own language.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="a">
+                <p>8. Which title best matches the passage?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="li-r1-q8" value="a"> A. Language and Cultural Identity</label>
+                  <label class="option"><input type="radio" name="li-r1-q8" value="b"> B. Why Local Languages Should Disappear</label>
+                  <label class="option"><input type="radio" name="li-r1-q8" value="c"> C. Global Trade and Business Growth</label>
+                  <label class="option"><input type="radio" name="li-r1-q8" value="d"> D. The Climate of Island Countries</label>
+                  <label class="option"><input type="radio" name="li-r1-q8" value="e"> E. Political Systems in Modern States</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>A</b> дұрыс. Best title language және cultural identity арасындағы негізгі байланысты қамтиды.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>A</b> правильно. This title covers the main link between language and cultural identity.
+                  </div>
+                </div>
+              </div>
+
+              <button class="check-btn" type="button" data-check="language-identity-reading-1">
+                <span class="inline-lang" data-lang="kk">Жауаптарды тексеру</span>
+                <span class="inline-lang" data-lang="ru">Проверить ответы</span>
+              </button>
+
+              <div class="result-box" data-result="language-identity-reading-1">
+                <div class="score-placeholder"></div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- ================= UNIT 3.5 / READING 2 ================= -->
+        <div class="reading-block" id="subunit-3-5-reading-2">
+          <div class="reading-header">
+            <div class="reading-title-card">
+              <div class="section-kicker">Unit 3 · Subunit 5 · Reading 2</div>
+              <h2>Art, Music and Culture in Modern Society</h2>
+
+              <div class="reading-translation">
+                <span class="inline-lang" data-lang="kk">Қазіргі қоғамдағы өнер, музыка және мәдениет</span>
+                <span class="inline-lang" data-lang="ru">Искусство, музыка и культура в современном обществе</span>
+              </div>
+            </div>
+
+            <div class="reading-info-card">
+              <div class="lang-content" data-lang="kk">
+                <p>
+                  Бұл reading мәтіні art (өнер), music (музыка), cultural life (мәдени өмір),
+                  traditional art forms (дәстүрлі өнер түрлері), modern artists (заманауи өнерпаздар),
+                  technology (технология) және cultural preservation (мәдениетті сақтау) туралы.
+                </p>
+              </div>
+
+              <div class="lang-content" data-lang="ru">
+                <p>
+                  Этот reading text об art (искусстве), music (музыке), cultural life (культурной жизни),
+                  traditional art forms (традиционных видах искусства), modern artists (современных художниках),
+                  technology (технологии) и cultural preservation (сохранении культуры).
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="reading-grid">
+            <article class="text-card">
+              <h3 class="card-title">
+                <span class="inline-lang" data-lang="kk">Мәтін</span>
+                <span class="inline-lang" data-lang="ru">Текст</span>
+              </h3>
+
+              <div class="reading-text">
+                <div class="reading-top">
+                  <span class="level-badge">B1</span>
+                  <span class="reading-heading">Reading Practice · Language, Culture and Art</span>
+                </div>
+
+                <p><b>Topic:</b> Art, Music and Culture in Modern Society</p>
+
+                <p>
+                  Art and music are important parts of cultural life. They help people express emotions, remember
+                  history and share ideas. A painting, a song, a dance or a film can show what a society values and
+                  how people understand the world around them.
+                </p>
+
+                <p>
+                  Traditional art forms often carry cultural memory. Musical instruments, folk dances, national
+                  costumes and old stories can connect people with the past. They are especially important during
+                  festivals, ceremonies and public celebrations. These events allow communities to show their identity
+                  and pass cultural knowledge to younger generations.
+                </p>
+
+                <p>
+                  At the same time, art is always changing. Modern artists often combine traditional themes with new
+                  styles, technology and global influences. A musician may use a traditional instrument in a modern
+                  song. A film director may tell an old story in a new visual style. This can help culture reach
+                  younger audiences and become more visible internationally.
+                </p>
+
+                <p>
+                  Some people worry that global culture can make local art less important. Popular films, music and
+                  online trends may attract more attention than traditional forms. However, technology can also protect
+                  culture. Museums, online archives, music platforms and social media can help people discover local
+                  art and share it with the world.
+                </p>
+
+                <p>
+                  For this reason, art and music should not be seen only as entertainment. They are also connected
+                  with identity, education and cultural preservation. A society that supports its artists also supports
+                  its memory and future.
+                </p>
+              </div>
+            </article>
+
+            <article class="task-card" data-test="art-music-culture-reading-2">
+              <h3 class="card-title">Reading 2 · Questions</h3>
+
+              <div class="question" data-answer="d">
+                <p>1. What is the main idea of the passage?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="am-r2-q1" value="a"> A. Art and music are only forms of entertainment</label>
+                  <label class="option"><input type="radio" name="am-r2-q1" value="b"> B. Traditional art cannot exist in modern society</label>
+                  <label class="option"><input type="radio" name="am-r2-q1" value="c"> C. Global culture always destroys local art</label>
+                  <label class="option"><input type="radio" name="am-r2-q1" value="d"> D. Art and music express identity, preserve culture and adapt to modern life</label>
+                  <label class="option"><input type="radio" name="am-r2-q1" value="e"> E. Technology has no connection with cultural preservation</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>D</b> дұрыс. Main idea (негізгі ой) — art және music identity, cultural memory, education және preservation-пен байланысты, әрі modern life-қа adapt болады.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>D</b> правильно. Main idea: art and music express identity, preserve culture and adapt to modern life.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="b">
+                <p>2. What can art and music help people do?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="am-r2-q2" value="a"> A. Forget their history completely</label>
+                  <label class="option"><input type="radio" name="am-r2-q2" value="b"> B. Express emotions, remember history and share ideas</label>
+                  <label class="option"><input type="radio" name="am-r2-q2" value="c"> C. Stop all cultural communication</label>
+                  <label class="option"><input type="radio" name="am-r2-q2" value="d"> D. Remove cultural values from society</label>
+                  <label class="option"><input type="radio" name="am-r2-q2" value="e"> E. Avoid festivals and public celebrations</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>B</b> дұрыс. Specific detail (нақты ақпарат): art and music emotions express, history remember және ideas share етуге көмектеседі.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>B</b> правильно. Art and music help people express emotions, remember history and share ideas.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="e">
+                <p>3. Which traditional art forms are mentioned in the passage?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="am-r2-q3" value="a"> A. Only modern advertisements and online games</label>
+                  <label class="option"><input type="radio" name="am-r2-q3" value="b"> B. Only legal documents and political speeches</label>
+                  <label class="option"><input type="radio" name="am-r2-q3" value="c"> C. Only trade agreements and business reports</label>
+                  <label class="option"><input type="radio" name="am-r2-q3" value="d"> D. Only scientific articles and climate models</label>
+                  <label class="option"><input type="radio" name="am-r2-q3" value="e"> E. Musical instruments, folk dances, national costumes and old stories</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>E</b> дұрыс. Мәтінде musical instruments, folk dances, national costumes және old stories аталған.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>E</b> правильно. The passage mentions musical instruments, folk dances, national costumes and old stories.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="a">
+                <p>4. Why are festivals and ceremonies important?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="am-r2-q4" value="a"> A. They help communities show identity and pass knowledge to young people</label>
+                  <label class="option"><input type="radio" name="am-r2-q4" value="b"> B. They stop communities from sharing cultural knowledge</label>
+                  <label class="option"><input type="radio" name="am-r2-q4" value="c"> C. They are useful only for foreign tourists</label>
+                  <label class="option"><input type="radio" name="am-r2-q4" value="d"> D. They make national costumes disappear</label>
+                  <label class="option"><input type="radio" name="am-r2-q4" value="e"> E. They remove old stories from society</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>A</b> дұрыс. Festivals және ceremonies communities-ке identity көрсетуге және cultural knowledge younger generations-ға жеткізуге мүмкіндік береді.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>A</b> правильно. Festivals and ceremonies help communities show identity and pass cultural knowledge to younger generations.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="d">
+                <p>5. How can modern artists adapt tradition?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="am-r2-q5" value="a"> A. By refusing all global influences</label>
+                  <label class="option"><input type="radio" name="am-r2-q5" value="b"> B. By stopping young people from seeing art</label>
+                  <label class="option"><input type="radio" name="am-r2-q5" value="c"> C. By removing traditional themes completely</label>
+                  <label class="option"><input type="radio" name="am-r2-q5" value="d"> D. By combining traditional themes with new styles, technology and global influences</label>
+                  <label class="option"><input type="radio" name="am-r2-q5" value="e"> E. By making culture less visible internationally</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>D</b> дұрыс. Modern artists traditional themes-ті new styles, technology және global influences-пен combine етеді.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>D</b> правильно. Modern artists combine traditional themes with new styles, technology and global influences.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="b">
+                <p>6. What concern do some people have about global culture?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="am-r2-q6" value="a"> A. It may make local art more important in every case</label>
+                  <label class="option"><input type="radio" name="am-r2-q6" value="b"> B. It may make local art less important</label>
+                  <label class="option"><input type="radio" name="am-r2-q6" value="c"> C. It will stop all online trends</label>
+                  <label class="option"><input type="radio" name="am-r2-q6" value="d"> D. It will remove all museums from society</label>
+                  <label class="option"><input type="radio" name="am-r2-q6" value="e"> E. It will make traditional forms more popular automatically</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>B</b> дұрыс. Мәтінде global culture local art less important етуі мүмкін деп кейбір адамдар worry етеді.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>B</b> правильно. Some people worry that global culture can make local art less important.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="c">
+                <p>7. How can technology help protect culture?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="am-r2-q7" value="a"> A. By hiding all local art from the world</label>
+                  <label class="option"><input type="radio" name="am-r2-q7" value="b"> B. By making museums and archives unnecessary</label>
+                  <label class="option"><input type="radio" name="am-r2-q7" value="c"> C. By using museums, online archives, music platforms and social media to share local art</label>
+                  <label class="option"><input type="radio" name="am-r2-q7" value="d"> D. By stopping people from discovering cultural traditions</label>
+                  <label class="option"><input type="radio" name="am-r2-q7" value="e"> E. By replacing all artists with business companies</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>C</b> дұрыс. Technology museums, online archives, music platforms және social media арқылы local art discover және share етуге көмектеседі.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>C</b> правильно. Technology can help through museums, online archives, music platforms and social media.
+                  </div>
+                </div>
+              </div>
+
+              <div class="question" data-answer="a">
+                <p>8. Which title best matches the passage?</p>
+                <div class="options">
+                  <label class="option"><input type="radio" name="am-r2-q8" value="a"> A. Art, Music and Culture in Modern Society</label>
+                  <label class="option"><input type="radio" name="am-r2-q8" value="b"> B. Why Local Art Has No Future</label>
+                  <label class="option"><input type="radio" name="am-r2-q8" value="c"> C. Global Trade and Imported Goods</label>
+                  <label class="option"><input type="radio" name="am-r2-q8" value="d"> D. Geography and Climate of Island Countries</label>
+                  <label class="option"><input type="radio" name="am-r2-q8" value="e"> E. Political Authority and Government</label>
+                </div>
+
+                <div class="question-explanation">
+                  <div class="lang-content" data-lang="kk">
+                    <b>A</b> дұрыс. Best title art, music, culture және modern society арасындағы негізгі байланысты қамтиды.
+                  </div>
+                  <div class="lang-content" data-lang="ru">
+                    <b>A</b> правильно. This title covers the key link between art, music, culture and modern society.
+                  </div>
+                </div>
+              </div>
+
+              <button class="check-btn" type="button" data-check="art-music-culture-reading-2">
+                <span class="inline-lang" data-lang="kk">Жауаптарды тексеру</span>
+                <span class="inline-lang" data-lang="ru">Проверить ответы</span>
+              </button>
+
+              <div class="result-box" data-result="art-music-culture-reading-2">
+                <div class="score-placeholder"></div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="support-grid">
+          <article class="vocab-card">
+            <h3 class="card-title">Vocabulary</h3>
+
+            <div class="vocab-grid">
+              <div class="vocab-row"><b>cultural identity</b><span>мәдени бірегейлік</span><span>культурная идентичность</span></div>
+              <div class="vocab-row"><b>cultural memory</b><span>мәдени жады</span><span>культурная память</span></div>
+              <div class="vocab-row"><b>multilingual society</b><span>көптілді қоғам</span><span>многоязычное общество</span></div>
+              <div class="vocab-row"><b>language preservation</b><span>тілді сақтау</span><span>сохранение языка</span></div>
+              <div class="vocab-row"><b>cultural life</b><span>мәдени өмір</span><span>культурная жизнь</span></div>
+              <div class="vocab-row"><b>traditional art forms</b><span>дәстүрлі өнер түрлері</span><span>традиционные виды искусства</span></div>
+              <div class="vocab-row"><b>folk dance</b><span>халық биі</span><span>народный танец</span></div>
+              <div class="vocab-row"><b>cultural preservation</b><span>мәдениетті сақтау</span><span>сохранение культуры</span></div>
+            </div>
+          </article>
+
+          <article class="strategy-card">
+            <h3 class="card-title">Reading strategy</h3>
+
+            <div class="lang-content" data-lang="kk">
+              <ul class="strategy-list">
+                <li>Main idea (негізгі ой) сұрағында language (тіл), culture (мәдениет) және identity (бірегейлік) арасындағы байланысты тап.</li>
+                <li>Cause-effect (себеп-салдар) сұрағында if, because, for this reason, however сияқты signal words (белгі сөздер)-ге қара.</li>
+                <li>Best title (ең лайық тақырып) сұрағында тек бір paragraph емес, бүкіл passage (мәтін)-нің ортақ идеясын таңда.</li>
+              </ul>
+            </div>
+
+            <div class="lang-content" data-lang="ru">
+              <ul class="strategy-list">
+                <li>В main idea (главная мысль) ищи связь между language (языком), culture (культурой) и identity (идентичностью).</li>
+                <li>В cause-effect (причинно-следственная связь) смотри на signal words (сигнальные слова): if, because, for this reason, however.</li>
+                <li>В best title (лучшее название) выбирай общую идею всего passage (текста), а не одного paragraph (абзаца).</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+              </main>
+
+  <footer class="section">
+    <div class="page-shell">
+      <div class="content-card">
+        <div class="section-kicker">© Назерке</div>
+
+        <h2 class="card-title">
+          <span class="inline-lang" data-lang="kk">Барлық құқық қорғалған</span>
+          <span class="inline-lang" data-lang="ru">Все права защищены</span>
+        </h2>
+
+        <p>
+          <span class="inline-lang" data-lang="kk">
+            Материалды рұқсатсыз көшіруге, сатуға, қайта таратуға немесе коммерциялық мақсатта қолдануға болмайды.
+          </span>
+          <span class="inline-lang" data-lang="ru">
+            Запрещается копировать, продавать, распространять или использовать материал в коммерческих целях без разрешения.
+          </span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function switchLanguage(lang) {
+      document.body.classList.remove("lang-kk", "lang-ru");
+      document.body.classList.add("lang-" + lang);
+
+      document.querySelectorAll(".lang-btn").forEach(function(btn) {
+        btn.classList.remove("active");
+      });
+
+      document.querySelectorAll('[data-set-lang="' + lang + '"]').forEach(function(btn) {
+        btn.classList.add("active");
+      });
+
+      try {
+        localStorage.setItem("unit3ReadingLang", lang);
+      } catch (e) {}
+    }
+
+    function checkTest(testId) {
+      const testBox = document.querySelector('[data-test="' + testId + '"]');
+      const resultBox = document.querySelector('[data-result="' + testId + '"]');
+
+      if (!testBox || !resultBox) return;
+
+      const questions = testBox.querySelectorAll(".question");
+      let score = 0;
+
+      questions.forEach(function(question) {
+        const correctAnswer = question.getAttribute("data-answer");
+        const selected = question.querySelector('input[type="radio"]:checked');
+
+        question.querySelectorAll(".option").forEach(function(option) {
+          option.classList.remove("correct", "wrong");
+
+          const input = option.querySelector("input");
+          if (!input) return;
+
+          if (input.value === correctAnswer) {
+            option.classList.add("correct");
+          }
+
+          if (selected && input.checked && input.value !== correctAnswer) {
+            option.classList.add("wrong");
+          }
+        });
+
+        const explanation = question.querySelector(".question-explanation");
+        if (explanation) {
+          explanation.classList.add("show");
+        }
+
+        if (selected && selected.value === correctAnswer) {
+          score++;
+        }
+      });
+
+      const oldScore = resultBox.querySelector(".score-line");
+      if (oldScore) oldScore.remove();
+
+      const scoreLine = document.createElement("div");
+      scoreLine.className = "score-line";
+      scoreLine.innerHTML =
+        '<span class="inline-lang" data-lang="kk">Нәтиже: ' + score + ' / ' + questions.length + '</span>' +
+        '<span class="inline-lang" data-lang="ru">Результат: ' + score + ' / ' + questions.length + '</span>';
+
+      resultBox.prepend(scoreLine);
+      resultBox.classList.add("show");
+
+      const currentLang = document.body.classList.contains("lang-ru") ? "ru" : "kk";
+      switchLanguage(currentLang);
+
+      resultBox.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest"
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      document.querySelectorAll("[data-set-lang]").forEach(function(button) {
+        button.addEventListener("click", function() {
+          const lang = button.getAttribute("data-set-lang");
+          switchLanguage(lang);
+        });
+      });
+
+      let savedLang = "kk";
+      try {
+        savedLang = localStorage.getItem("unit3ReadingLang") || "kk";
+      } catch (e) {}
+
+      if (savedLang !== "kk" && savedLang !== "ru") {
+        savedLang = "kk";
+      }
+
+      switchLanguage(savedLang);
+
+      document.querySelectorAll("[data-check]").forEach(function(button) {
+        button.addEventListener("click", function() {
+          const testId = button.getAttribute("data-check");
+          checkTest(testId);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
+    
